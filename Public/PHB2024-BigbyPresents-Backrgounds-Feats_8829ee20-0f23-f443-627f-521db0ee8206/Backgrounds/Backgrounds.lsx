@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+  <version major="4" minor="8" revision="0" build="500"/>
+  <region id="Backgrounds">
+    <node id="root">
+      <children>
+        <node id="Background">
+          <attribute id="Description" type="TranslatedString" handle="hba11aa22bb33cc44dd55ee66ff778801" version="1"/>
+          <attribute id="DisplayName" type="TranslatedString" handle="hba11aa22bb33cc44dd55ee66ff778800" version="1"/>
+          <attribute id="Passives" type="LSString" value="HeroicInspiration_Unlock;Skill_Intimidation;Skill_Survival;PHB2024_StrikeOfGiants_Feature"/>
+          <attribute id="UUID" type="guid" value="b1a1e1c0-0000-0000-0000-000000000001"/>
+          <children>
+            <node id="Tags">
+              <attribute id="Object" type="guid" value="9c38904c-4aed-4d22-9038-fc7d103aaed5"/>
+            </node>
+          </children>
+        </node>
+        <node id="Background">
+          <attribute id="Description" type="TranslatedString" handle="hba11aa22bb33cc44dd55ee66ff778804" version="1"/>
+          <attribute id="DisplayName" type="TranslatedString" handle="hba11aa22bb33cc44dd55ee66ff778803" version="1"/>
+          <attribute id="Passives" type="LSString" value="HeroicInspiration_Unlock;Skill_History;Skill_Perception;PHB2024_RuneShaper_Feature"/>
+          <attribute id="UUID" type="guid" value="b1a1e1c0-0000-0000-0000-000000000002"/>
+          <children>
+            <node id="Tags">
+              <attribute id="Object" type="guid" value="9c38904c-4aed-4d22-9038-fc7d103aaed5"/>
+            </node>
+          </children>
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

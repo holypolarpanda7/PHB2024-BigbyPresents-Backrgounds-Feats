@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+  <version major="4" minor="8" revision="0" build="0"/>
+  <region id="ActionResourceDefinitions">
+    <node id="root">
+      <children>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa04" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa05" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="StrikeOfGiants_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="a7c6a0f2-4c4f-4e8b-98b6-9a3e76f3c121"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae0" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae1" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_FogCloud_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a001"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae2" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae3" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_InflictWounds_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a002"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae4" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae5" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_ChromaticOrb_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a003"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae6" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae7" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_DisguiseSelf_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a004"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae8" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fae9" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_BurningHands_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a005"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faea" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faeb" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_SpeakWithAnimals_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a006"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faec" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faed" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_ArmorOfAgathys_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a007"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faee" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faef" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_Goodberry_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a008"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf0" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf1" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_Longstrider_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a009"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf2" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf3" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_Command_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a00a"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf4" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf5" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_Entangle_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a00b"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf6" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf7" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_Sanctuary_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a00c"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf8" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34faf9" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Rune_Thunderwave_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="9ce3ecf7-6b6e-46d9-9e2b-9d0c51e2a00d"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fadb" version="1"/>
+          <attribute id="Name" type="FixedString" value="LearnRunePoint"/>
+          <attribute id="ReplenishType" type="FixedString" value="Never"/>
+          <attribute id="UUID" type="guid" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fadc" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fadd" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="ComprehendLanguages_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="b2c3d4e5-f6a7-8901-bcde-f23456789012"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="h0b35696bg82a5g2269gabf9g644a442fecdf" version="1"/>
+          <attribute id="Name" type="FixedString" value="LearnStrike"/>
+          <attribute id="ReplenishType" type="FixedString" value="Never"/>
+          <attribute id="UUID" type="guid" value="d2d3f7c0-9b4b-4f5e-a9e9-4a0f1c27f4c2"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa44" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa45" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="SearingIgnition_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="a1a1a1a1-1111-2222-3333-444444444441"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa54" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa55" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="FrigidRetaliation_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="b2b2b2b2-2222-3333-4444-555555555552"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa62" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa63" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="CloudyEscape_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="c3c3c3c3-3333-4444-5555-666666666663"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa74" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa75" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="StoneThrow_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="d4d4d4d4-4444-5555-6666-777777777774"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa82" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa83" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="MaelstromAura_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="e5e5e5e5-5555-6666-7777-888888888885"/>
+        </node>
+        <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa92" version="1"/>
+          <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa93" version="1"/>
+          <attribute id="IsHidden" type="bool" value="false"/>
+          <attribute id="Name" type="FixedString" value="Bulwark_Charge"/>
+          <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+          <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+          <attribute id="UUID" type="guid" value="f6f6f6f6-6666-7777-8888-999999999996"/>
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

@@ -1,0 +1,315 @@
+// ==================== STRIKE OF THE GIANTS FEAT ====================
+new entry "PHB2024_StrikeOfGiants_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa00"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa01"
+data "Icon" "Action_WildMagic_Enchant"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate"
+data "BoostConditions" "not HasStatus('PHB2024_STRIKE_BLOCK',context.Source)"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants);IF(not HasStatus('PHB2024_STRIKE_BLOCK',context.Source)):UnlockSpell(Shout_PHB2024_Strike_Select);UnlockSpellVariant(SpellId('Shout_PHB2024_Strike_Select'),ModifyIconGlow());"
+data "StatsFunctorContext" "OnCast"
+data "Conditions" "HasUseCosts('LearnStrike')"
+data "StatsFunctors" "IF(not HasActionResource('LearnStrike', 1, 0, false)):ApplyStatus(SELF,PHB2024_STRIKE_BLOCK,100,-1);IF(not HasActionResource('LearnStrike', 1, 0, false)):RemoveStatus(SELF,PHB2024_STRIKE_PICK)"
+
+new entry "PHB2024_StrikeOfGiants_Charges"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa02"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa03"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest;OnShortRest"
+data "Boosts" "ActionResource(StrikeOfGiants_Charge,3,0);IF(CharacterLevelGreaterThan(4)):ActionResource(StrikeOfGiants_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(StrikeOfGiants_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(StrikeOfGiants_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(StrikeOfGiants_Charge,1,0)"
+
+new entry "PHB2024_StrikeOfGiants_Cloud"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa0a"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa0b"
+data "DescriptionParams" "DealDamage(1d4,Thunder)"
+data "Icon" "Spell_Conjuration_CloudOfDaggers"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants_Cloud);UnlockInterrupt(Interrupt_PHB2024_Strike_Cloud)"
+
+new entry "PHB2024_StrikeOfGiants_Fire"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa0e"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa0f"
+data "DescriptionParams" "DealDamage(1d10,Fire)"
+data "Icon" "Spell_Evocation_FireBolt"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants_Fire);UnlockInterrupt(Interrupt_PHB2024_Strike_Fire)"
+
+new entry "PHB2024_StrikeOfGiants_Frost"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa10"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa11"
+data "DescriptionParams" "DealDamage(1d6,Cold)"
+data "Icon" "Spell_Evocation_RayOfFrost"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants_Frost);UnlockInterrupt(Interrupt_PHB2024_Strike_Frost)"
+
+new entry "PHB2024_StrikeOfGiants_Hill"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa14"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa15"
+data "DescriptionParams" "DealDamage(1d6,Bludgeoning)"
+data "Icon" "Action_ChampionChallenge"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants_Hill);UnlockInterrupt(Interrupt_PHB2024_Strike_Hill)"
+
+new entry "PHB2024_StrikeOfGiants_Stone"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa16"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa17"
+data "DescriptionParams" "DealDamage(1d6,Force)"
+data "Icon" "Spell_WallOfStone"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants_Stone);UnlockInterrupt(Interrupt_PHB2024_Strike_Stone)"
+
+new entry "PHB2024_StrikeOfGiants_Storm"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa18"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa19"
+data "DescriptionParams" "DealDamage(1d6,Lightning)"
+data "Icon" "Spell_Evocation_LightningBolt"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(PHB2024_StrikeOfGiants_Storm);UnlockInterrupt(Interrupt_PHB2024_Strike_Storm)"
+
+// ==================== RUNE SHAPER FEAT ====================
+// Main feature passive - ONLY grants Rune Shaper spell (has block condition)
+// Comprehend Languages granted separately via Feats.lsx PassivesAdded
+new entry "PHB2024_RuneShaper_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa20"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa21"
+data "Icon" "Action_Icon_Rune"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate"
+data "BoostConditions" "not HasStatus('PHB2024_RUNESHAPER_BLOCK',context.Source)"
+data "Boosts" "UnlockSpell(Shout_PHB2024_RuneShaper)"
+data "StatsFunctorContext" "OnCast"
+data "Conditions" "HasUseCosts('LearnRunePoint')"
+data "StatsFunctors" "IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):ApplyStatus(SELF,PHB2024_RUNESHAPER_BLOCK,100,-1);IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):RemoveStatus(SELF,PHB2024_RUNESHAPER)"
+
+// Comprehend Languages unlock - granted via PHB2024_COMPREHEND_LANGUAGES status
+// Unlocks our custom container spell with Free/Slot variants
+new entry "PHB2024_RuneShaper_ComprehendLanguages"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fadc"
+data "Description" "hca12da34eb56fc78ad90bc12de34fadd"
+data "Icon" "Spell_Divination_ComprehendLanguages"
+data "Properties" "Highlighted"
+data "Boosts" "UnlockSpell(Shout_PHB2024_ComprehendLanguages)"
+
+// Comprehend Languages charge - separate passive for the resource
+new entry "PHB2024_RuneShaper_ComprehendLanguages_Charge"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(ComprehendLanguages_Charge,1,0)"
+
+// ==================== RUNE SHAPER UNLOCK PASSIVES ====================
+// Each rune grants its spell AND the charge for that rune (1/long rest)
+// BG3 automatically uses highest spellcasting modifier for granted spells.
+// Spellcasters can also use spell slots via the container spell.
+// NOTE: BoostContext is only for resource grants - UnlockSpell works without it
+
+// FOG CLOUD (Cloud Rune)
+new entry "PHB2024_Rune_Unlock_FogCloud"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_FogCloud);ActionResource(Rune_FogCloud_Charge,1,0)"
+
+// INFLICT WOUNDS (Death Rune)
+new entry "PHB2024_Rune_Unlock_InflictWounds"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_InflictWounds);ActionResource(Rune_InflictWounds_Charge,1,0)"
+
+// CHROMATIC ORB (Dragon Rune)
+new entry "PHB2024_Rune_Unlock_ChromaticOrb"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb);ActionResource(Rune_ChromaticOrb_Charge,1,0)"
+
+// DISGUISE SELF (Enemy Rune)
+new entry "PHB2024_Rune_Unlock_DisguiseSelf"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf);ActionResource(Rune_DisguiseSelf_Charge,1,0)"
+
+// BURNING HANDS (Fire Rune)
+new entry "PHB2024_Rune_Unlock_BurningHands"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_BurningHands);ActionResource(Rune_BurningHands_Charge,1,0)"
+
+// SPEAK WITH ANIMALS (Friend Rune)
+new entry "PHB2024_Rune_Unlock_SpeakWithAnimals"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals);ActionResource(Rune_SpeakWithAnimals_Charge,1,0)"
+
+// ARMOR OF AGATHYS (Frost Rune)
+new entry "PHB2024_Rune_Unlock_ArmorOfAgathys"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys);ActionResource(Rune_ArmorOfAgathys_Charge,1,0)"
+
+// GOODBERRY (Hill Rune)
+new entry "PHB2024_Rune_Unlock_Goodberry"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Goodberry);ActionResource(Rune_Goodberry_Charge,1,0)"
+
+// LONGSTRIDER (Journey Rune)
+new entry "PHB2024_Rune_Unlock_Longstrider"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Longstrider);ActionResource(Rune_Longstrider_Charge,1,0)"
+
+// COMMAND (King Rune)
+new entry "PHB2024_Rune_Unlock_Command"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Command);ActionResource(Rune_Command_Charge,1,0)"
+
+// ENTANGLE (Mountain Rune)
+new entry "PHB2024_Rune_Unlock_Entangle"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Entangle);ActionResource(Rune_Entangle_Charge,1,0)"
+
+// SANCTUARY (Stone Rune)
+new entry "PHB2024_Rune_Unlock_Sanctuary"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Sanctuary);ActionResource(Rune_Sanctuary_Charge,1,0)"
+
+// THUNDERWAVE (Storm Rune)
+new entry "PHB2024_Rune_Unlock_Thunderwave"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_Thunderwave);ActionResource(Rune_Thunderwave_Charge,1,0)"
+
+// ==================== EMBER OF THE FIRE GIANT ====================
+new entry "PHB2024_EmberFireGiant_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa40"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa41"
+data "Icon" "Spell_Evocation_FireBolt"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "Resistance(Fire,Resistant);UnlockSpell(Shout_PHB2024_SearingIgnition);ActionResource(SearingIgnition_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(SearingIgnition_Charge,1,0)"
+
+new entry "PHB2024_SearingIgnition_Charges"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(SearingIgnition_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(SearingIgnition_Charge,1,0)"
+
+// ==================== FURY OF THE FROST GIANT ====================
+new entry "PHB2024_FuryFrostGiant_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa50"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa51"
+data "Icon" "Spell_Evocation_RayOfFrost"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "Resistance(Cold,Resistant);UnlockInterrupt(Interrupt_PHB2024_FrigidRetaliation);ActionResource(FrigidRetaliation_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(FrigidRetaliation_Charge,1,0)"
+
+new entry "PHB2024_FrigidRetaliation_Charges"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(FrigidRetaliation_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(FrigidRetaliation_Charge,1,0)"
+
+// ==================== GUILE OF THE CLOUD GIANT ====================
+new entry "PHB2024_GuileCloudGiant_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa60"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa61"
+data "Icon" "Spell_Transmutation_GaseousForm"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockInterrupt(Interrupt_PHB2024_CloudyEscape);ActionResource(CloudyEscape_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(CloudyEscape_Charge,1,0)"
+
+new entry "PHB2024_CloudyEscape_Charges"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(CloudyEscape_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(CloudyEscape_Charge,1,0)"
+
+// ==================== KEENNESS OF THE STONE GIANT ====================
+new entry "PHB2024_KeennessStoneGiant_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa70"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa71"
+data "Icon" "Action_Monster_ElementalEarth_Slam"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "Darkvision(60);UnlockSpell(Projectile_PHB2024_StoneThrow);ActionResource(StoneThrow_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(StoneThrow_Charge,1,0)"
+
+new entry "PHB2024_StoneThrow_Charges"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(StoneThrow_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(StoneThrow_Charge,1,0)"
+
+// ==================== SOUL OF THE STORM GIANT ====================
+new entry "PHB2024_SoulStormGiant_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa80"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa81"
+data "Icon" "Spell_Evocation_LightningBolt"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockSpell(Shout_PHB2024_MaelstromAura);ActionResource(MaelstromAura_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(MaelstromAura_Charge,1,0)"
+
+new entry "PHB2024_MaelstromAura_Charges"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(MaelstromAura_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(MaelstromAura_Charge,1,0)"
+
+// ==================== VIGOR OF THE HILL GIANT ====================
+new entry "PHB2024_VigorHillGiant_Feature"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa90"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa91"
+data "Icon" "Action_ChampionChallenge"
+data "Properties" "Highlighted"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "UnlockInterrupt(Interrupt_PHB2024_Bulwark);ActionResource(Bulwark_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(Bulwark_Charge,1,0)"
+
+new entry "PHB2024_IronStomach"
+type "PassiveData"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa94"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa95"
+data "Icon" "Action_ChampionChallenge"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnShortRest"
+data "StatsFunctors" "RegainHitPoints(ProficiencyBonus+ConstitutionModifier)"
+
+new entry "PHB2024_Bulwark_Charges"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "BoostContext" "OnCreate;OnLongRest"
+data "Boosts" "ActionResource(Bulwark_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(Bulwark_Charge,1,0)"
+
+new entry "PHB2024_MaelstromAura_Defense"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "AC(2);Disadvantage(AttackTarget)"

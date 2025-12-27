@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e988a674-28fe-49d2-a6ce-c5c1e0141f4c">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="caaedf11-f080-4b43-ad76-d52b2720c097"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Cloud"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="IsEnemy()"></field>
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Wisdom"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="TARGET:DealDamage(1d4, Thunder, Magical);IF(not SavingThrow(Ability.Wisdom, SourceSpellDC())):TARGET:ApplyStatus(PHB2024_STRIKE_CLOUD_DISADV,100,1);SELF:ApplyStatus(PHB2024_STRIKE_USED_TURN,100,1);RemoveStatus(PHB2024_STRIKE_GATING)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="937f8677-c760-4490-9a44-08206a2ba750"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Fire"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="IsEnemy()"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="TARGET:DealDamage(1d10, Fire, Magical);SELF:ApplyStatus(PHB2024_STRIKE_USED_TURN,100,1);RemoveStatus(PHB2024_STRIKE_GATING)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="50d5959a-495c-4a22-ba03-a827e779c71c"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Frost"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="IsEnemy()"></field>
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Constitution"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="TARGET:DealDamage(1d6, Cold, Magical);IF(not SavingThrow(Ability.Constitution, SourceSpellDC())):TARGET:ApplyStatus(PHB2024_STRIKE_FROST_ROOT,100,1);SELF:ApplyStatus(PHB2024_STRIKE_USED_TURN,100,1);RemoveStatus(PHB2024_STRIKE_GATING)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d0309a38-750a-4f25-96a2-960ddc67c06d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Hill"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="IsEnemy()"></field>
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Strength"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="TARGET:DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);IF(not SavingThrow(Ability.Strength, SourceSpellDC())):TARGET:ApplyStatus(PRONE,100,1);SELF:ApplyStatus(PHB2024_STRIKE_USED_TURN,100,1);RemoveStatus(PHB2024_STRIKE_GATING)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7ebcc34d-4d7d-4315-aee6-3020b1f77b81"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Stone"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="IsEnemy()"></field>
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Strength"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="TARGET:DealDamage(1d6, Force, Magical);IF(not SavingThrow(Ability.Strength, SourceSpellDC())):TARGET:Push(10);SELF:ApplyStatus(PHB2024_STRIKE_USED_TURN,100,1);RemoveStatus(PHB2024_STRIKE_GATING)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e42d8bf8-0e96-4f2d-8468-68712fe38870"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Storm"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="IsEnemy()"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Ability"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="TARGET:DealDamage(1d6, Lightning, Magical);IF(HasStatus('PHB2024_STRIKE_DC_CON')):IF(not SavingThrow(Ability.Constitution, SourceSpellDC(0,context.Source,Ability.Constitution))):TARGET:ApplyStatus(PHB2024_STRIKE_STORM_WEAKEN,100,1);IF(not HasStatus('PHB2024_STRIKE_DC_CON')):IF(not SavingThrow(Ability.Strength, SourceSpellDC(0,context.Source,Ability.Strength))):TARGET:ApplyStatus(PHB2024_STRIKE_STORM_WEAKEN,100,1);SELF:ApplyStatus(PHB2024_STRIKE_USED_TURN,100,1);RemoveStatus(PHB2024_STRIKE_GATING)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6cc68253-4272-4817-bea8-007a4babcd22"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_CloudyEscape_MistyStep"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa64" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa65" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_GaseousForm"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="GROUND:TeleportSource();GROUND:RemoveStatus(SELF,PHB2024_CLOUDY_ESCAPE)"></field>
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="9"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasVerbalComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;Temporary" enumeration_type_name="SpellFlagList" version="1"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

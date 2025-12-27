@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bf564726-57b4-44a6-b1e2-ee48431b6eda"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud_Free;Target_PHB2024_Rune_FogCloud_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac1" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="57dc9ab4-71a2-4fbf-90fa-d82bb56f5dcc"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_FogCloud_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a9e20de2-35cb-4d92-a3f9-db2002b7cbc0"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_FogCloud"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1cfbd6b2-8f14-43e0-ab61-a51386c54e44"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds_Free;Target_PHB2024_Rune_InflictWounds_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac3" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a6268ad0-c545-410d-b2e2-36491df18046"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_InflictWounds_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="cd9da52d-aab6-4ce4-8768-c1c21370e884"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2ba82470-07be-4580-8a2b-4c4d4d59f1fc"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb"></field>
+        <field name="SpellType" type="" value="Projectile"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;HasHighGroundRangeExtension;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb_Free;Projectile_PHB2024_Rune_ChromaticOrb_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac5" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fc419329-a274-4eb6-93fd-ef1ee938c0cf"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb_Free"></field>
+        <field name="SpellType" type="" value="Projectile"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;HasHighGroundRangeExtension;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_ChromaticOrb_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="464dff5f-7d91-43a8-a30a-64501f16920a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb_Slot"></field>
+        <field name="SpellType" type="" value="Projectile"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;HasHighGroundRangeExtension;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Projectile_PHB2024_Rune_ChromaticOrb"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="361bf911-a5a8-48ad-8983-ac8994ff1dd7"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf_Free;Shout_PHB2024_Rune_DisguiseSelf_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac7" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e778728e-d1ea-4588-a420-03db42560f8d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf_Free"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_DisguiseSelf_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="89667945-239f-4168-8fe2-4dfd5444c42d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf_Slot"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_DisguiseSelf"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f427d578-4a40-430e-8316-f907ef22c41c"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
+        <field name="SpellType" type="" value="Zone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands_Free;Zone_PHB2024_Rune_BurningHands_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac9" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8bb92ea8-fb40-484c-a23e-3156bca45c6f"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands_Free"></field>
+        <field name="SpellType" type="" value="Zone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_BurningHands_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8b64c509-feab-4260-8310-c6e08e407f13"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands_Slot"></field>
+        <field name="SpellType" type="" value="Zone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="89f885b4-6281-4738-895a-7af6913644cb"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals_Free;Shout_PHB2024_Rune_SpeakWithAnimals_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facb" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8ca24eb4-6bb5-40f9-90ef-82c2b1fb1050"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals_Free"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_SpeakWithAnimals_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2d088872-c0f3-4c9c-bda2-c86c35bf8b9f"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals_Slot"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_SpeakWithAnimals"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="06a2e298-a724-47e6-b7c2-cb76744ccf37"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys_Free;Shout_PHB2024_Rune_ArmorOfAgathys_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facd" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a29b8bb8-c09c-4f12-b567-cbbe3351a767"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys_Free"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_ArmorOfAgathys_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6458be65-0d83-4603-9cf2-682cb195e85b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys_Slot"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fc29e3d5-7c57-4c7d-bbf3-677613f5c4bd"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry_Free;Target_PHB2024_Rune_Goodberry_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facf" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="865632dd-4747-48e0-9d35-cb980b5121d3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_Goodberry_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f62c9e4d-f41c-406c-aa54-ff75dd69f91c"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Goodberry"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="77ee5f5d-1066-47f7-af10-a896b07fdce8"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider_Free;Target_PHB2024_Rune_Longstrider_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad1" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="da7c73e1-27f3-4707-8483-34f9cc6488bb"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_Longstrider_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c3c164e5-32eb-4acb-99f5-7f8f994ae6ea"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Longstrider"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d48bafb8-f3c4-4bea-90f3-d4036a7e1b2f"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Command"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;IsHarmful;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Command_Free;Target_PHB2024_Rune_Command_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad3" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7b99a823-d22b-4142-9342-efe69139ddd9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Command_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;IsHarmful;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_Command_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Command"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Command"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c72fac90-cfad-4438-8cc7-5b2237ad232d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Command_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;IsHarmful;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Command"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Command"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="52bd6a3b-f632-4d8b-85db-29f550af2a7a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Entangle"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Entangle_Free;Target_PHB2024_Rune_Entangle_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad5" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b419030f-592f-4f97-92f0-d607c21b91fe"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Entangle_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_Entangle_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Entangle"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Entangle"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="919ef6ff-03e4-4b70-bdc8-6c2ae11a7ee9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Entangle_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Entangle"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Entangle"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a88e11bf-143c-4f9d-b100-9118a27be365"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary_Free;Target_PHB2024_Rune_Sanctuary_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad7" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f3f0bac8-8dae-40b4-956c-5fe749c05e05"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary_Free"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_Sanctuary_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b8d25960-e4ac-4a80-b371-e4d382595ff3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary_Slot"></field>
+        <field name="SpellType" type="" value="Target"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_Sanctuary"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="85ada9f4-5225-4662-bedb-0c7a00273bfa"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
+        <field name="SpellType" type="" value="Zone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave_Free;Zone_PHB2024_Rune_Thunderwave_Slot"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad9" version="1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="032c61a2-8cea-4124-84e3-1de151a8152e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave_Free"></field>
+        <field name="SpellType" type="" value="Zone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Rune_Thunderwave_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3090ddfd-b94f-439d-83ac-42bc15b3a1f1"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave_Slot"></field>
+        <field name="SpellType" type="" value="Zone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

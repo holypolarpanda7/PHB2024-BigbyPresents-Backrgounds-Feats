@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="c496009d-a970-44a3-b882-7ed3364dc271">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="35c6e449-fc09-4b2e-8e48-66177bb0e801"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Strike_Cloud"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0a" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0b" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d4,Thunder)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_CloudOfDaggers"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Item() and (IsMeleeAttack() or IsRangedWeaponAttack()) and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and (IsUnarmedAttack() or IsWeaponAttack()) and not IsKillingBlow() and not AnyEntityIsItem()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(1d4,Thunder,Magical);ApplyStatus(PHB2024_STRIKE_CLOUD_EFFECT,100,1);ApplyStatus(SELF,PHB2024_STRIKE_VFX_CLOUD,100,1);ApplyStatus(SELF,PHB2024_STRIKE_VFX_CLOUD_BLUR,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Roll" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Strike"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('StrikeOfGiants_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="02dd87ae-4694-4839-adf6-5c4d46b8ad86"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Strike_Fire"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0e" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0f" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d10,Fire)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_FireBolt"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Item() and (IsMeleeAttack() or IsRangedWeaponAttack()) and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and (IsUnarmedAttack() or IsWeaponAttack()) and not IsKillingBlow() and not AnyEntityIsItem()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(1d10,Fire,Magical);ApplyStatus(SELF,PHB2024_STRIKE_VFX_FIRE,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Roll" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Strike"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('StrikeOfGiants_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a45bd5f7-13f2-46f4-aa71-c2a365f4d51e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Strike_Frost"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa10" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa11" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Cold)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Item() and (IsMeleeAttack() or IsRangedWeaponAttack()) and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and (IsUnarmedAttack() or IsWeaponAttack()) and not IsKillingBlow() and not AnyEntityIsItem()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(1d6,Cold,Magical);ApplyStatus(PHB2024_STRIKE_FROST_EFFECT,100,1);ApplyStatus(SELF,PHB2024_STRIKE_VFX_FROST,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Roll" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Strike"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('StrikeOfGiants_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9d966d36-a6b1-439c-b692-15ff94a073a2"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Strike_Hill"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa14" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa15" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Bludgeoning)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Item() and (IsMeleeAttack() or IsRangedWeaponAttack()) and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and (IsUnarmedAttack() or IsWeaponAttack()) and not IsKillingBlow() and not AnyEntityIsItem()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(1d6,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Roll" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Strike"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('StrikeOfGiants_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="94e56795-d86e-4bb0-83ef-a8a6fde92b77"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Strike_Stone"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa16" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa17" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Force)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_WallOfStone"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Item() and (IsMeleeAttack() or IsRangedWeaponAttack()) and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and (IsUnarmedAttack() or IsWeaponAttack()) and not IsKillingBlow() and not AnyEntityIsItem()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(1d6,Force,Magical);Force(3);ApplyStatus(SELF,PHB2024_STRIKE_VFX_STONE,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Roll" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Strike"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('StrikeOfGiants_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="eaaf8afc-f7d6-47ed-b244-d94e213795b9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Strike_Storm"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa18" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa19" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Lightning)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Item() and (IsMeleeAttack() or IsRangedWeaponAttack()) and Self(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and (IsUnarmedAttack() or IsWeaponAttack()) and not IsKillingBlow() and not AnyEntityIsItem()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(1d6,Lightning,Magical);ApplyStatus(PHB2024_STRIKE_STORM_WEAKEN,100,1);ApplyStatus(SELF,PHB2024_STRIKE_VFX_STORM,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Roll" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="StrikeOfGiants_Charge:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Strike"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('StrikeOfGiants_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="862ce381-fbab-4421-93e9-e7f16b05708e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_FrigidRetaliation"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa54" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa55" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d8+ProficiencyBonus,Cold)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="InterruptContext" type="EnumerationListTableFieldDefinition" value="OnCastHit" enumeration_type_name="InterruptContext" version="1"></field>
+        <field name="InterruptContextScope" type="EnumerationListTableFieldDefinition" value="Self" enumeration_type_name="InterruptContextScope" version="1"></field>
+        <field name="Container" type="StringTableFieldDefinition" value="YesNoDecision"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="Self(context.Target,context.Observer) and not Self(context.Source,context.Observer) and Enemy(context.Source,context.Observer) and IsAbleToReact(context.Observer) and IsAttack() and IsHit() and not AnyEntityIsItem() and HasLastAttackTriggered()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="DealDamage(OBSERVER_SOURCE,1d8+ProficiencyBonus,Cold,Magical);SavingThrow(Ability.Constitution,8+ProficiencyBonus+ConstitutionModifier,OnFail::ApplyStatus(OBSERVER_SOURCE,PHB2024_FRIGID_RETALIATION_FROZEN,100,1));ApplyStatus(SELF,FIRE_SHIELD_CHILL,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="FrigidRetaliation_Charge:1;ReactionActionPoint:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_FrigidRetaliation"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('FrigidRetaliation_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnStatusApplied;OnStatusRemoved" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4060f57d-23e3-4feb-8db2-0a58f0cc2074"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_CloudyEscape"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa62" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa63" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_GaseousForm"></field>
+        <field name="InterruptContext" type="EnumerationListTableFieldDefinition" value="OnCastHit" enumeration_type_name="InterruptContext" version="1"></field>
+        <field name="InterruptContextScope" type="EnumerationListTableFieldDefinition" value="Self" enumeration_type_name="InterruptContextScope" version="1"></field>
+        <field name="Container" type="StringTableFieldDefinition" value="YesNoDecision"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="Self(context.Target,context.Observer) and not Self(context.Source,context.Observer) and Enemy(context.Source,context.Observer) and IsAbleToReact(context.Observer) and IsAttack() and IsHit() and not AnyEntityIsItem() and HasLastAttackTriggered()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="ApplyStatus(OBSERVER_OBSERVER,PHB2024_CLOUDY_ESCAPE,100,-1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="CloudyEscape_Charge:1;ReactionActionPoint:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_CloudyEscape"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('CloudyEscape_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnStatusApplied;OnStatusRemoved" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="InterruptFlags" type="EnumerationListTableFieldDefinition" value="Extinguish" enumeration_type_name="InterruptFlagsList" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="70a58636-b810-4178-af38-86636bbd4f00"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_PHB2024_Bulwark"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa92" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa93" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="InterruptContext" type="EnumerationListTableFieldDefinition" value="OnPostRoll" enumeration_type_name="InterruptContext" version="1"></field>
+        <field name="InterruptContextScope" type="EnumerationListTableFieldDefinition" value="Self" enumeration_type_name="InterruptContextScope" version="1"></field>
+        <field name="Container" type="StringTableFieldDefinition" value="YesNoDecision"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and not Self(context.Source,context.Observer) and HasInterruptedSavingThrow() and HasSavingThrowWithAbility(Ability.Strength) and not AnyEntityIsItem() and IsRerollInterruptInteresting()"></field>
+        <field name="Properties" type="StringTableFieldDefinition" value="SetReroll(19,true);ApplyStatus(SELF,PHB2024_BULWARK_VFX,100,1)" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Cost" type="StringTableFieldDefinition" value="Bulwark_Charge:1;ReactionActionPoint:1"></field>
+        <field name="Stack" type="StringTableFieldDefinition" value="PHB2024_Bulwark"></field>
+        <field name="InterruptDefaultValue" type="EnumerationListTableFieldDefinition" value="Enabled" enumeration_type_name="InterruptDefaultValue" version="1"></field>
+        <field name="EnabledConditions" type="StringTableFieldDefinition" value="HasActionResource('Bulwark_Charge',1,0,false,false,context.Observer)"></field>
+        <field name="EnabledContext" type="EnumerationListTableFieldDefinition" value="OnActionResourcesChanged" enumeration_type_name="StatsFunctorContext" version="1"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

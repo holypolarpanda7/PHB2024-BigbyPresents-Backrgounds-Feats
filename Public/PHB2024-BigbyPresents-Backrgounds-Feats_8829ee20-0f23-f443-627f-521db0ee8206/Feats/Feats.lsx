@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="Feats">
+        <node id="root">
+            <children>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="StrikeOfTheGiants"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_StrikeOfGiants_Feature"/>
+                    <attribute id="Requirements" type="LSString" value="FeatRequirementAbilityGreaterEqual(&apos;Strength&apos;,13) or FeatRequirementAbilityGreaterEqual(&apos;Constitution&apos;,13)"/>
+                    <attribute id="UUID" type="guid" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b25"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="RuneCarver"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_RuneShaper_Feature;PHB2024_RuneShaper_ComprehendLanguages"/>
+                    <attribute id="UUID" type="guid" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ab"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="EmberOfTheFireGiant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_EmberFireGiant_Feature"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(b9149c8e-52c8-4b3d-9f6d-8a7e6c5d4b3a,1,1,FeatASI)"/>
+                    <attribute id="UUID" type="guid" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="FuryOfTheFrostGiant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_FuryFrostGiant_Feature"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(b9149c8e-52c8-4b3d-9f6d-8a7e6c5d4b3a,1,1,FeatASI)"/>
+                    <attribute id="UUID" type="guid" value="b2c3d4e5-f6a7-8901-bcde-f23456789012"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="GuileOfTheCloudGiant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_GuileCloudGiant_Feature"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(c9149c8e-52c8-4b3d-9f6d-8a7e6c5d4b3b,1,1,FeatASI)"/>
+                    <attribute id="UUID" type="guid" value="c3d4e5f6-a7b8-9012-cdef-345678901234"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="KeennessOfTheStoneGiant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_KeennessStoneGiant_Feature"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(b9149c8e-52c8-4b3d-9f6d-8a7e6c5d4b3a,1,1,FeatASI)"/>
+                    <attribute id="UUID" type="guid" value="d4e5f6a7-b8c9-0123-defa-456789012345"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="SoulOfTheStormGiant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_SoulStormGiant_Feature"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(d9149c8e-52c8-4b3d-9f6d-8a7e6c5d4b3c,1,1,FeatASI)"/>
+                    <attribute id="UUID" type="guid" value="e5f6a7b8-c9d0-1234-efab-567890123456"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="VigorOfTheHillGiant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PHB2024_VigorHillGiant_Feature;PHB2024_IronStomach"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(b9149c8e-52c8-4b3d-9f6d-8a7e6c5d4b3a,1,1,FeatASI)"/>
+                    <attribute id="UUID" type="guid" value="f6a7b8c9-d0e1-2345-fabc-678901234567"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

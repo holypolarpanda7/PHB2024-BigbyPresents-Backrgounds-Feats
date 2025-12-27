@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="64d07522-f5ae-494e-b92d-77ae9c71feb1">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hba11aa22bb33cc44dd55ee66ff778801" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hba11aa22bb33cc44dd55ee66ff778800" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="HeroicInspiration_Unlock;Skill_Intimidation;Skill_Survival;PHB2024_StrikeOfGiants_Feature"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="b1a1e1c0-0000-0000-0000-000000000001"></field>
+        <field name="Tags" type="GuidObjectListTableFieldDefinition" value="9c38904c-4aed-4d22-9038-fc7d103aaed5"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="72767f70-9353-4a9a-9056-74fc418e904b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="72767f70-9353-4a9a-9056-74fc418e904b"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hba11aa22bb33cc44dd55ee66ff778804" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hba11aa22bb33cc44dd55ee66ff778803" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="HeroicInspiration_Unlock;Skill_History;Skill_Perception;PHB2024_RuneShaper_Feature"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="b1a1e1c0-0000-0000-0000-000000000002"></field>
+        <field name="Tags" type="GuidObjectListTableFieldDefinition" value="9c38904c-4aed-4d22-9038-fc7d103aaed5"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="97ef5589-3d20-422f-a3a3-4d624cc05880"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="97ef5589-3d20-422f-a3a3-4d624cc05880"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e2a8d59b-0e34-4a7c-bf5f-db7a2bb34cde">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="0c71518f-8f77-472b-8ea3-77ed3f42643a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_PICK"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_INITIATE"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(LearnStrike,1,0);UnlockSpell(Shout_SoG_Strike_Cloud_Option);UnlockSpell(Shout_SoG_Strike_Fire_Option);UnlockSpell(Shout_SoG_Strike_Frost_Option);UnlockSpell(Shout_SoG_Strike_Hill_Option);UnlockSpell(Shout_SoG_Strike_Stone_Option);UnlockSpell(Shout_SoG_Strike_Storm_Option)"></field>
+        <field name="OnRemoveFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_BLOCK,100,-1)"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value=";"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d1e9550c-1f94-4591-899c-1a8cad297fa4"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_BLOCK"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_BLOCK"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f8603f84-7ff4-4140-9587-56acedf1a8a9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_UNLOCK_CLOUD"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;UnavailableInActiveRoll" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges;PHB2024_StrikeOfGiants_Cloud"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f03ef602-89a6-4121-85f6-1b2d2f411964"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_UNLOCK_FIRE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;UnavailableInActiveRoll" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges;PHB2024_StrikeOfGiants_Fire"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6c073528-8334-41c5-b66e-da4c30b1641a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_UNLOCK_FROST"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;UnavailableInActiveRoll" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges;PHB2024_StrikeOfGiants_Frost"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="65bf3008-c7c1-462a-82dd-3297ed7fdab3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_UNLOCK_HILL"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;UnavailableInActiveRoll" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges;PHB2024_StrikeOfGiants_Hill"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="385cc05b-2598-4673-8af4-86260beb81b4"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_UNLOCK_STONE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;UnavailableInActiveRoll" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges;PHB2024_StrikeOfGiants_Stone"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5cf9b062-c526-4aaf-a303-d971222d4ee9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_UNLOCK_STORM"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;UnavailableInActiveRoll" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges;PHB2024_StrikeOfGiants_Storm"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="38853feb-245f-4325-92cd-37cf4e3f8b48"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNESHAPER"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_RUNESHAPER"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(LearnRunePoint,1,0);IF(CharacterLevelGreaterThan(4)):ActionResource(LearnRunePoint,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(LearnRunePoint,1,0);UnlockSpell(Shout_PHB2024_Rune_Cloud);UnlockSpell(Shout_PHB2024_Rune_Death);UnlockSpell(Shout_PHB2024_Rune_Dragon);UnlockSpell(Shout_PHB2024_Rune_Enemy);UnlockSpell(Shout_PHB2024_Rune_Fire);UnlockSpell(Shout_PHB2024_Rune_Friend);UnlockSpell(Shout_PHB2024_Rune_Frost);UnlockSpell(Shout_PHB2024_Rune_Hill);UnlockSpell(Shout_PHB2024_Rune_Journey);UnlockSpell(Shout_PHB2024_Rune_King);UnlockSpell(Shout_PHB2024_Rune_Mountain);UnlockSpell(Shout_PHB2024_Rune_Stone);UnlockSpell(Shout_PHB2024_Rune_Storm)"></field>
+        <field name="OnRemoveFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNESHAPER_BLOCK,100,-1)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c58d6596-21a2-45be-8566-1f8a599cf04c"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNESHAPER_BLOCK"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_RUNESHAPER_BLOCK"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9a9b600e-24e0-4f02-8bd1-24beb7e8da50"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_COMPREHEND_LANGUAGES"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_RuneShaper_ComprehendLanguages;PHB2024_RuneShaper_ComprehendLanguages_Charge"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4e3aed88-7f0b-462a-be78-ae5672fd9a07"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_CLOUD"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_FogCloud"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c9f0b0c2-26c3-4805-a78d-c623946fcada"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_DEATH"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_InflictWounds"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2f0ebe9f-6803-441d-b420-e6cde89f45af"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_DRAGON"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_ChromaticOrb"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9880780e-dc34-4ce9-ab31-ff43f4d72fc3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_ENEMY"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_DisguiseSelf"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a8f4175d-a23c-4baf-acf7-e6d421f32423"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_FIRE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_BurningHands"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d63fe47c-8ab9-420f-ad2d-fedae18ac795"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_FRIEND"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_SpeakWithAnimals"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f3033c37-6e72-4a47-84e9-15e3de78fb3e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_FROST"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_ArmorOfAgathys"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e8d5ed3e-b52e-4921-92f7-7a3ecaf2e993"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_HILL"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_Goodberry"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3c2037a6-6ea7-40bd-ada8-a8eeec1d04c3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_JOURNEY"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_Longstrider"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5c179f6c-a320-46cd-883d-a748f3944059"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_KING"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_Command"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a4a03787-60bf-4a4c-af27-93a4197138b6"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_MOUNTAIN"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_Entangle"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b95da377-9c8f-406b-b1d2-6d530b2dc0b8"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_STONE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_Sanctuary"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a4ece387-d33b-4e41-b552-e9ee2ecd71e3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RUNE_UNLOCK_STORM"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_Rune_Unlock_Thunderwave"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="0d622a0e-7039-432e-bdcc-4dc63a7a024d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_GATING"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_GATING"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden;RemoveOnTurnStart" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Duration" type="" value="6.0"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5bb9f320-b6fe-44e4-9535-e370844a90e5"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_CLOUD_EFFECT"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa30" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa31" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_CloudOfDaggers"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_CLOUD_EFFECT"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Disadvantage(AttackRoll)"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="886923d7-7787-42f2-a67e-ac388bd75187"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_FROST_EFFECT"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa32" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa33" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_FROST_EFFECT"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResourceBlock(Movement)"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="10a2aded-6ae5-4a45-a202-be1ff2950b95"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_STORM_WEAKEN"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa34" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa35" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_STORM_WEAKEN"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Disadvantage(SavingThrow)"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4c751d86-0ffc-4a7f-953b-e2ca784254d4"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_VFX_CLOUD"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_VFX"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="6a79a286-8314-4537-80c6-d1d02bae4423"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="0d6d311f-25bf-4662-bccc-69576dce6192"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_VFX_CLOUD_BLUR"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_VFX_BLUR"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="d37fab67-6932-44c4-995e-f051d7027fc5"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="15df7703-4955-45b4-94a9-708222b5c0ae"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_VFX_FIRE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_VFX"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="8a4c7e6e-a629-4765-9c5d-d354838703d8"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="149c127b-5fb5-45d4-ac8d-f5c2a4424da2"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_VFX_FROST"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_VFX"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="e92003cd-6622-4a82-a3c7-69d6222f0ba0"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="23dea305-ce2a-43ea-8c96-254e1d6130ad"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_VFX_STONE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_VFX"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="10e29e97-31af-400f-8520-71fbed87d2aa"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f61cd7be-42a9-467c-ad1b-9afd26bbbe3e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_STRIKE_VFX_STORM"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_STRIKE_VFX"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="7905bb82-0284-46b8-855b-24f17560fe4a"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnStart" enumeration_type_name="StatusEvent" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ab8aedce-3c72-4168-bbca-775440ba8c70"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_FRIGID_RETALIATION_FROZEN"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa54" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa55" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_FRIGID_RETALIATION_FROZEN"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResourceBlock(Movement)"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="e92003cd-6622-4a82-a3c7-69d6222f0ba0"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="EndTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurnEnd" enumeration_type_name="StatusEvent" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dbd038ae-24be-44b0-9869-43bb643402df"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_CLOUDY_ESCAPE"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa62" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa63" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_GaseousForm"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_CLOUDY_ESCAPE"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="DamageReduction(Half,All);UnlockSpell(Target_PHB2024_CloudyEscape_MistyStep)"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="6eab4d73-d039-4753-aba9-ff5a949b3eba"></field>
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnMove;OnSpellCast;OnAttack;OnTurnEnd" enumeration_type_name="StatusEvent" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6a23ba56-7bc3-45cd-9ec9-deb9ea0837c8"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_MAELSTROM_AURA"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa82" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa83" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_MAELSTROM_AURA"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Resistance(Lightning,Resistant);Resistance(Thunder,Resistant)"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="bd5c7cec-d968-4c22-b4a6-8bc5f82ba3c9"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+        <field name="AuraRadius" type="IntegerTableFieldDefinition" value="5"></field>
+        <field name="AuraStatuses" type="StringTableFieldDefinition" value="TARGET:IF(Enemy()):ApplyStatus(PHB2024_MAELSTROM_SLOWED,100,0)"></field>
+        <field name="Passives" type="StringTableFieldDefinition" value="PHB2024_MaelstromAura_Defense"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7c4321c4-7264-4c9d-b420-5739f9af6559"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_MAELSTROM_SLOWED"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa82" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa83" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_MAELSTROM_SLOWED"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResourceMultiplier(Movement,50,0)"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="7905bb82-0284-46b8-855b-24f17560fe4a"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="233a7a52-2965-482d-bac8-581731370135"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_BULWARK_VFX"></field>
+        <field name="StatusType" type="" value="EFFECT"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa92" version="1"></field>
+        <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1"></field>
+        <field name="SoundStart" type="StringTableFieldDefinition" value="Misc_Status_Interrupt_FightingStyle_Protection"></field>
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="d4b8c77a-6b07-4b8a-94de-eb1e949dc5b6"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e6aa4199-aa48-4dc2-b3af-b8de126ffd2b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_BULWARK_RESIST"></field>
+        <field name="StatusType" type="" value="BOOST"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa92" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa93" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="StackId" type="StringTableFieldDefinition" value="PHB2024_BULWARK_RESIST"></field>
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1"></field>
+        <field name="OnApplyFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(PRONE);RemoveStatus(DOWNED);RemoveStatus(SLOWED);RemoveStatus(PHB2024_MAELSTROM_SLOWED)"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

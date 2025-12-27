@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="67731907-4ad8-4be6-9326-d6f5b982140e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1839a97c-e9ae-4477-bff3-ff1e1f7099a5"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StoneThrow"></field>
+        <field name="SpellType" type="" value="Projectile"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa74" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa75" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d10,Force)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_Monster_ElementalEarth_Slam"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Self() and Character()"></field>
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d10,Force)"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="BonusActionPoint:1;StoneThrow_Charge:1"></field>
+        <field name="SpellRoll" type="StringTableFieldDefinition" value="Attack(AttackType.RangedSpellAttack)"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="DealDamage(1d10,Force,Magical);SavingThrow(Ability.Strength,8+ProficiencyBonus+StrengthModifier,OnFail::ApplyStatus(PRONE,100,1))"></field>
+        <field name="SpellFail" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="60"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;AddFallDamageOnLand;IsHarmful" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" value="1"></field>
+        <field name="Cooldown" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="CooldownType" version="1"></field>
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast"></field>
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="b1befe57-ee3e-4126-8c9d-3b6cec7eb3f4,,;f2803838-31cf-471b-85d1-92fa2d0eb7c2,,;4be0751c-9fca-4c35-9337-6bf8a321c516,,;86b52093-596c-4054-bb1d-2dbdfcdc4347,,;e1726462-6f35-4551-af40-5247a314f38d,,;,,;,,;,,;,,"></field>
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Damage" enumeration_type_name="VerbalIntent" version="1"></field>
+        <field name="SpellAnimationIntentType" type="EnumerationTableFieldDefinition" value="Aggressive" enumeration_type_name="SpellAnimationIntentType" version="1"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

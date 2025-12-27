@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="9fd4ac7a-fad7-424f-83df-0893eae93c38">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4c16547a-ff24-4ef2-838a-a882880b6be0"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_ComprehendLanguages"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Level" type="IntegerTableFieldDefinition" value="1"></field>
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Divination" enumeration_type_name="SpellSchool" version="1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_PHB2024_ComprehendLanguages_Free;Shout_PHB2024_ComprehendLanguages_Slot"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self()"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Divination_ComprehendLanguages"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="h72f99854g6e85g4a90g9eb6g28e5253e1d12" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hb0ac7326g9de6g4b63ga82aga2d89106fd04" version="1"></field>
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(COMPREHEND_LANGUAGES,100,-1)"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(COMPREHEND_LANGUAGES,100,-1)"></field>
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Utility" enumeration_type_name="VerbalIntent" version="1"></field>
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;bf924cc6-8b39-4c3b-b1c0-eda165cf084b,,;9f0bb95f-2b3e-4f52-b4e0-03122e8ea39d,,;cc5cc960-e388-47fd-be4f-4a3f29aac534,,;,,;0b0dc35b-4814-4f3a-b574-0c768e6a798a,,;,,;,,"></field>
+        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Buff_Gen_L1to3"></field>
+        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Buff_Gen_L1to3_Loop"></field>
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_ComprehendLanguages_L1to3"></field>
+        <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_ComprehendLanguages"></field>
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="914419c0-0cf2-44e6-8c12-ebad8012dcb7"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_ComprehendLanguages_Free"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4c16547a-ff24-4ef2-838a-a882880b6be0"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;ComprehendLanguages_Charge:1"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_ComprehendLanguages"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_ComprehendLanguages"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b977ec7c-69ec-4e51-b3e8-8e276e88a5c3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_ComprehendLanguages_Slot"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4c16547a-ff24-4ef2-838a-a882880b6be0"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_ComprehendLanguages"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_ComprehendLanguages"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="439f93eb-2bff-4439-9dce-1cce38db96f0"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Select"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_PICK,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_WildMagic_Enchant"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="ImmediateCast" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="not HasStatus('PHB2024_STRIKE_BLOCK')"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa06" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa07" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Base_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="AIFlags" type="EnumerationListTableFieldDefinition" value="CanNotUse" enumeration_type_name="AIFlags" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self()"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="ha89d0bf2g900agc525g2d6ag60946ce1fb76" version="1"></field>
+        <field name="CastSound" type="StringTableFieldDefinition" value="Action_Cast_ArcaneRecovery"></field>
+        <field name="TargetSound" type="StringTableFieldDefinition" value="Action_Impact_ArcaneRecovery"></field>
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1"></field>
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;LearnStrike:1"></field>
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03114753-8d91-4c52-8207-728a67cdd59b,,;,,;51c06d74-c048-452a-a248-41a751728e3e,,;e9731a5c-e4ba-4872-8950-36d625061ec3,,;8fcb1f19-a84b-486d-81fa-098aaf7cc9be,,;,,;c5bd6ce6-281c-4314-9f74-9f7bb2f4cf03,,;,,;,,"></field>
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Utility" enumeration_type_name="VerbalIntent" version="1"></field>
+        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="Temporary" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="af787096-8656-4495-a6ce-cbd376578069"></field>
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="b7fb4cd6-971f-44c0-9447-378092d36b63"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="cf26aaa3-9317-451a-9331-89e9832bde56"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Strike_Cloud_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_CLOUD,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_CloudOfDaggers"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0a" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0b" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="54511d29-7ef0-47b5-be91-6f236952e44f"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Strike_Fire_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_FIRE,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_FireBolt"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0e" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0f" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8824dc94-d741-4e17-ae10-a195bf3d779c"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Strike_Frost_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_FROST,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa10" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa11" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="413d8623-3cdf-45f4-9bb9-75907b935c68"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Strike_Hill_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_HILL,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa14" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa15" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d08e9d16-4b63-408c-8e44-51525fe3dbee"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Strike_Stone_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_STONE,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_WallOfStone"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa16" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa17" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="462cba73-ff0f-435a-be47-ac6d5ab0cc1a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="SoG_Strike_Storm_Option"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="39b8c33b-b120-4eda-ad95-6376fd10026b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_STORM,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa18" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa19" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="07e49acf-dedc-408f-8255-da5b756c439a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Strike_Cloud"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="439f93eb-2bff-4439-9dce-1cce38db96f0"></field>
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="" clear_inherited_value="true" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_STRIKE_SELECTED,100,-1);ApplyStatus(SELF,PHB2024_STRIKE_CHOSEN_CLOUD,100,-1)"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0a" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0b" version="1"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Strike_Select"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c23d43a1-c970-465a-aefb-6021df17ebb4"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RuneShaper"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self()"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNESHAPER,100,-1);ApplyStatus(SELF,PHB2024_COMPREHEND_LANGUAGES,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Divination_ArcaneEye"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa2c" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa2d" version="1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="ImmediateCast" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Base"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="AIFlags" type="EnumerationListTableFieldDefinition" value="CanNotUse" enumeration_type_name="AIFlags" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self()"></field>
+        <field name="CastSound" type="StringTableFieldDefinition" value="Action_Cast_ArcaneRecovery"></field>
+        <field name="TargetSound" type="StringTableFieldDefinition" value="Action_Impact_ArcaneRecovery"></field>
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1"></field>
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;LearnRunePoint:1"></field>
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03114753-8d91-4c52-8207-728a67cdd59b,,;,,;51c06d74-c048-452a-a248-41a751728e3e,,;e9731a5c-e4ba-4872-8950-36d625061ec3,,;8fcb1f19-a84b-486d-81fa-098aaf7cc9be,,;,,;c5bd6ce6-281c-4314-9f74-9f7bb2f4cf03,,;,,;,,"></field>
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Utility" enumeration_type_name="VerbalIntent" version="1"></field>
+        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="Temporary" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="af787096-8656-4495-a6ce-cbd376578069"></field>
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="b7fb4cd6-971f-44c0-9447-378092d36b63"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="21f7cd6a-ff40-4849-968b-a22db569e618"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Cloud"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_CLOUD,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_FogCloud"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac1" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac2" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a7f23a89-3afc-4d0b-aaf8-3ce4e362cb6f"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Death"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_DEATH,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Necromancy_InflictWounds"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac3" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac4" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="131b5bc7-a73a-4094-9f90-ca6ae7b5f553"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Dragon"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_DRAGON,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_ChromaticOrb"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac5" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac6" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1aee0436-00e9-485e-8e5f-72b3cbaa3bb7"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Enemy"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_ENEMY,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Illusion_DisguiseSelf"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac7" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac8" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9f533eca-ccac-43b2-8568-b8b9abaa43ad"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Fire"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_FIRE,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_BurningHands"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fac9" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34faca" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d90251ff-fa5c-4f5b-ace3-274f48d0ae86"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Friend"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_FRIEND,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Divination_SpeakWithAnimals"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facb" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facc" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f202a9ef-f3ba-47fd-938a-c0a0bee974d1"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Frost"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_FROST,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_ArmorOfAgathys"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facd" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34face" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="23e319c2-b001-4a2f-979b-7783a06c5f42"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Hill"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_HILL,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_Goodberry"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34facf" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad0" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3defb079-4f2d-4e5e-a19e-c9fcaaa63e32"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Journey"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_JOURNEY,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_Longstrider"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad1" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad2" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="07df1399-4dfa-4bbe-8206-957038ba6114"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_King"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_KING,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_Banishment"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad3" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad4" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a73a782e-9a86-4a1d-9520-701283a5268e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Mountain"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_MOUNTAIN,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_Entangled"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad5" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad6" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b65e7ea5-d052-46e2-8a09-486fc78d4cd1"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Stone"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_STONE,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_Sanctuary"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad7" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad8" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="79ba3b93-4088-44f5-b757-1b96405bebc2"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Storm"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="38e6bb36-0b23-4d4f-9e0f-e8d546abfc4b"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_STORM,100,-1)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_Thunderwave"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fad9" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fada" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fa7b7be2-8118-44ed-8827-af88829c1ce8"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_SearingIgnition"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa44" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa45" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d8+ProficiencyBonus,Fire)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_BurningHands"></field>
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d8+ProficiencyBonus,Fire)"></field>
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(BLIND,100,1)"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SearingIgnition_Charge:1"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,FIRE_SHIELD_WARM,100,1)"></field>
+        <field name="SpellRoll" type="StringTableFieldDefinition" value="SavingThrow(Ability.Dexterity,SourceSpellDC(),HalfDamageOnSave)"></field>
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="DealDamage(1d8+ProficiencyBonus,Fire,Magical);ApplyStatus(BLIND,100,1)"></field>
+        <field name="SpellFail" type="StringTableFieldDefinition" value="DealDamage((1d8+ProficiencyBonus)/2,Fire,Magical)"></field>
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="5"></field>
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="5"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasHighGroundRangeExtension;HasSomaticComponent;HasVerbalComponent;IsSpell" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Self() and Character()"></field>
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Damage" enumeration_type_name="VerbalIntent" version="1"></field>
+        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1"></field>
+        <field name="Cooldown" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="CooldownType" version="1"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6cf90cb5-1e3c-4b7a-967f-3e69a3b7fb6d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_MaelstromAura"></field>
+        <field name="SpellType" type="" value="Shout"></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa82" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa83" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="UseCosts" type="StringTableFieldDefinition" value="BonusActionPoint:1;MaelstromAura_Charge:1"></field>
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(SELF,PHB2024_MAELSTROM_AURA,100,2)"></field>
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(PHB2024_MAELSTROM_AURA,100,2)"></field>
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self()"></field>
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMagical;IsSelf" enumeration_type_name="SpellFlagList" version="1"></field>
+        <field name="Cooldown" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="CooldownType" version="1"></field>
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1"></field>
+        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1"></field>
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="10fc784a-4312-47a8-a6b8-6b529c646ac4"></field>
+        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="a3e2368b-f486-4cfc-b04a-b02e23383280"></field>
+        <field name="PositionEffect" type="GuidObjectTableFieldDefinition" value="de5e4e60-e2b7-44f4-aca8-c11390b4cc48"></field>
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Damage_Lightning_CallLightning_L1to3"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

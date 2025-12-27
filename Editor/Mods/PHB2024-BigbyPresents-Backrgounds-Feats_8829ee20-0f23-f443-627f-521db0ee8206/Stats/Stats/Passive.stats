@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="3e76b74c-a5ae-4268-944a-aa9c31e2185e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="103c91af-fdaf-416c-8904-85d284f36ca1"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa00" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa01" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_WildMagic_Enchant"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="BoostConditions" type="StringTableFieldDefinition" value="not HasStatus('PHB2024_STRIKE_BLOCK',context.Source)"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants);IF(not HasStatus('PHB2024_STRIKE_BLOCK',context.Source)):UnlockSpell(Shout_PHB2024_Strike_Select);UnlockSpellVariant(SpellId('Shout_PHB2024_Strike_Select'),ModifyIconGlow());"></field>
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnCast" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="HasUseCosts('LearnStrike')"></field>
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(not HasActionResource('LearnStrike', 1, 0, false)):ApplyStatus(SELF,PHB2024_STRIKE_BLOCK,100,-1);IF(not HasActionResource('LearnStrike', 1, 0, false)):RemoveStatus(SELF,PHB2024_STRIKE_PICK)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b837f049-73c3-4b85-a33f-26e1f5fea320"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Charges"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa02" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa03" version="1"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest;OnShortRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(StrikeOfGiants_Charge,3,0);IF(CharacterLevelGreaterThan(4)):ActionResource(StrikeOfGiants_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(StrikeOfGiants_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(StrikeOfGiants_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(StrikeOfGiants_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1b3ee9a7-7dba-41aa-9496-3226829f8b18"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Cloud"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0a" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0b" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d4,Thunder)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_CloudOfDaggers"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants_Cloud);UnlockInterrupt(Interrupt_PHB2024_Strike_Cloud)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5e231d66-158d-4229-a07c-a6fcbd804e4b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Fire"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0e" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa0f" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d10,Fire)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_FireBolt"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants_Fire);UnlockInterrupt(Interrupt_PHB2024_Strike_Fire)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a18dce4d-1426-4c65-bada-413401ca1a03"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Frost"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa10" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa11" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Cold)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants_Frost);UnlockInterrupt(Interrupt_PHB2024_Strike_Frost)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="92dc682e-b6c3-43c4-9798-b1fd9de00d9e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Hill"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa14" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa15" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Bludgeoning)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants_Hill);UnlockInterrupt(Interrupt_PHB2024_Strike_Hill)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1ed0bd4b-35df-4656-88b5-aa2bfaaab552"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Stone"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa16" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa17" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Force)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_WallOfStone"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants_Stone);UnlockInterrupt(Interrupt_PHB2024_Strike_Stone)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7abc05b1-28d4-4520-9a99-7f8a5962dfed"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StrikeOfGiants_Storm"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa18" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa19" version="1"></field>
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Lightning)"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Proficiency(PHB2024_StrikeOfGiants_Storm);UnlockInterrupt(Interrupt_PHB2024_Strike_Storm)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8e99a43e-540b-42ee-bc42-3f6bbf41c6e7"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RuneShaper_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa20" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa21" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_Icon_Rune"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="BoostConditions" type="StringTableFieldDefinition" value="not HasStatus('PHB2024_RUNESHAPER_BLOCK',context.Source)"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_PHB2024_RuneShaper)"></field>
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnCast" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Conditions" type="StringTableFieldDefinition" value="HasUseCosts('LearnRunePoint')"></field>
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):ApplyStatus(SELF,PHB2024_RUNESHAPER_BLOCK,100,-1);IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):RemoveStatus(SELF,PHB2024_RUNESHAPER)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ecdc5e19-e871-4454-a41d-7983ca7a8c32"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RuneShaper_ComprehendLanguages"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fadc" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fadd" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Divination_ComprehendLanguages"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_PHB2024_ComprehendLanguages)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="834e0e8c-8a51-4afb-889e-5f989c72162c"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_RuneShaper_ComprehendLanguages_Charge"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(ComprehendLanguages_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8365ee54-9447-46d6-be08-f46d01697093"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_FogCloud"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_FogCloud);ActionResource(Rune_FogCloud_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9dfefa44-a649-4f50-95c7-2db533ba6ed8"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_InflictWounds"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_InflictWounds);ActionResource(Rune_InflictWounds_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fe5bc514-2b5c-4167-98a8-d77cbcbb1f92"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_ChromaticOrb"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb);ActionResource(Rune_ChromaticOrb_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="09890236-08c9-4c48-94e2-2152a0161526"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_DisguiseSelf"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf);ActionResource(Rune_DisguiseSelf_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="97221cb2-2886-4483-b22a-bd4f40c4bd0a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_BurningHands"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Zone_PHB2024_Rune_BurningHands);ActionResource(Rune_BurningHands_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="65776d78-f4ac-4461-8ce6-95bf00fa2071"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_SpeakWithAnimals"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals);ActionResource(Rune_SpeakWithAnimals_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8ca013ea-5f52-4077-9583-7b550db0b2f3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_ArmorOfAgathys"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys);ActionResource(Rune_ArmorOfAgathys_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="35240cc4-d822-408f-a228-16cd1e5b6b25"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_Goodberry"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_Goodberry);ActionResource(Rune_Goodberry_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fb191fc7-ee60-4f33-a52d-39cd516a1ed0"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_Longstrider"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_Longstrider);ActionResource(Rune_Longstrider_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="20177bbb-7dad-442a-9f33-29faaeb804c9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_Command"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_Command);ActionResource(Rune_Command_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3403931d-3c7a-48dc-bf2a-b2485d891dc2"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_Entangle"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_Entangle);ActionResource(Rune_Entangle_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f057ce2b-57b9-42bd-9167-40732893027e"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_Sanctuary"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Target_PHB2024_Rune_Sanctuary);ActionResource(Rune_Sanctuary_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="20ceb8ce-50e9-459f-b629-7d580dfae0c8"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Rune_Unlock_Thunderwave"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Zone_PHB2024_Rune_Thunderwave);ActionResource(Rune_Thunderwave_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b37a41eb-1bbf-46f4-bd5a-34363f2042e9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_EmberFireGiant_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa40" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa41" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_FireBolt"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Resistance(Fire,Resistant);UnlockSpell(Shout_PHB2024_SearingIgnition);ActionResource(SearingIgnition_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(SearingIgnition_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="29f8c1e2-aed4-4836-b63c-d287d74ca283"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_SearingIgnition_Charges"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(SearingIgnition_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(SearingIgnition_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(SearingIgnition_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bc0b34b3-56c4-451b-be9e-286476fa0bad"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_FuryFrostGiant_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa50" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa51" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_RayOfFrost"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Resistance(Cold,Resistant);UnlockInterrupt(Interrupt_PHB2024_FrigidRetaliation);ActionResource(FrigidRetaliation_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(FrigidRetaliation_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6e52fca5-5d8a-47ac-8400-796aa1cd48e2"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_FrigidRetaliation_Charges"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(FrigidRetaliation_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(FrigidRetaliation_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(FrigidRetaliation_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2413408c-ddad-4fdb-a9d7-3243c23c1e38"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_GuileCloudGiant_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa60" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa61" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_GaseousForm"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockInterrupt(Interrupt_PHB2024_CloudyEscape);ActionResource(CloudyEscape_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(CloudyEscape_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e6dee9a1-b9b3-487d-b4c7-b0832cd84b19"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_CloudyEscape_Charges"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(CloudyEscape_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(CloudyEscape_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(CloudyEscape_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e6a07645-1788-4ccd-8c99-d5327c1fabc6"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_KeennessStoneGiant_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa70" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa71" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_Monster_ElementalEarth_Slam"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="Darkvision(60);UnlockSpell(Projectile_PHB2024_StoneThrow);ActionResource(StoneThrow_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(StoneThrow_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9ebede82-2be7-42bf-a70d-3a3d82cb957d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_StoneThrow_Charges"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(StoneThrow_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(StoneThrow_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(StoneThrow_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="853bb864-1e46-4041-a199-d53ee60f393a"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_SoulStormGiant_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa80" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa81" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_LightningBolt"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_PHB2024_MaelstromAura);ActionResource(MaelstromAura_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(MaelstromAura_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9c6bf28f-18ed-47f4-8211-a70651a04de5"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_MaelstromAura_Charges"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(MaelstromAura_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(MaelstromAura_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(MaelstromAura_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c4c95189-8d8f-44e6-900a-e855c4057073"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_VigorHillGiant_Feature"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa90" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa91" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockInterrupt(Interrupt_PHB2024_Bulwark);ActionResource(Bulwark_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(Bulwark_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8959bb65-f845-453f-b733-1ce87a10d471"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_IronStomach"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa94" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hca12da34eb56fc78ad90bc12de34fa95" version="1"></field>
+        <field name="Icon" type="StringTableFieldDefinition" value="Action_ChampionChallenge"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnShortRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="RegainHitPoints(ProficiencyBonus+ConstitutionModifier)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="42ae4003-2dbf-4b4a-b2df-9207b5441ed3"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_Bulwark_Charges"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="BoostContext" type="EnumerationListTableFieldDefinition" value="OnCreate;OnLongRest" enumeration_type_name="StatsFunctorContext" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="ActionResource(Bulwark_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(Bulwark_Charge,1,0)"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="49acb04b-28c4-4e38-930d-5d9efb07d8ab"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="PHB2024_MaelstromAura_Defense"></field>
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1"></field>
+        <field name="Boosts" type="StringTableFieldDefinition" value="AC(2);Disadvantage(AttackTarget)"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

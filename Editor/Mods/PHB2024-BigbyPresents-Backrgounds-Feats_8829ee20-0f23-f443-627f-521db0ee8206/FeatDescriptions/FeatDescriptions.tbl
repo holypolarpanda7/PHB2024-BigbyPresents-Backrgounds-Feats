@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="0bc6c1c1-edc3-45ae-badf-12732a57c361">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa01" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa00" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b25"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b26"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="08313c1d-e552-4a6b-82be-d7db73f79956"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="08313c1d-e552-4a6b-82be-d7db73f79956"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa21" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa20" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ab"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ac"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="a0c8648c-083f-4109-83b6-bd796a8640e4"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="a0c8648c-083f-4109-83b6-bd796a8640e4"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa41" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa40" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="a1b2c3d4-e5f6-7890-abcd-ef1234567891"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="a24f530f-ac49-4d0d-a542-97f357968081"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="a24f530f-ac49-4d0d-a542-97f357968081"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa51" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa50" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="b2c3d4e5-f6a7-8901-bcde-f23456789012"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="b2c3d4e5-f6a7-8901-bcde-f23456789013"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="82c4d404-ab60-4b13-b6f2-eb69e7bf84fb"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="82c4d404-ab60-4b13-b6f2-eb69e7bf84fb"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa61" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa60" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="c3d4e5f6-a7b8-9012-cdef-345678901234"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="c3d4e5f6-a7b8-9012-cdef-345678901235"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="59218bd4-59d7-4741-841a-1fe25c8fbd68"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="59218bd4-59d7-4741-841a-1fe25c8fbd68"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa71" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa70" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="d4e5f6a7-b8c9-0123-defa-456789012345"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="d4e5f6a7-b8c9-0123-defa-456789012346"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="b42b7be2-8617-4866-be18-08ee023d43a6"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="b42b7be2-8617-4866-be18-08ee023d43a6"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa81" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa80" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="e5f6a7b8-c9d0-1234-efab-567890123456"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="e5f6a7b8-c9d0-1234-efab-567890123457"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="ede4c9c6-5a00-4907-8de8-de2f19bc1537"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="ede4c9c6-5a00-4907-8de8-de2f19bc1537"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa91" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa90" version="1"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="f6a7b8c9-d0e1-2345-fabc-678901234567"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="f6a7b8c9-d0e1-2345-fabc-678901234568"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="bc3fa9f4-af1b-42a4-a11b-c6e62830191d"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="bc3fa9f4-af1b-42a4-a11b-c6e62830191d"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

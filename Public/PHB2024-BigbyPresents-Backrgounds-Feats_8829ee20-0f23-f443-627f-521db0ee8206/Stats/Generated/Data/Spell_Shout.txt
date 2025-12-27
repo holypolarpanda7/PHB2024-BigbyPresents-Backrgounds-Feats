@@ -1,0 +1,367 @@
+// ==================== RUNE SHAPER - COMPREHEND LANGUAGES ====================
+// Container spell pattern matching other rune spells:
+// - Container spell (what gets unlocked, shows both options)
+// - Free cast version (uses ComprehendLanguages_Charge, 1/long rest)
+// - Spell slot version (uses spell slots, hidden for non-casters)
+
+// Container spell - this is what gets unlocked
+new entry "Shout_PHB2024_ComprehendLanguages"
+type "SpellData"
+data "SpellType" "Shout"
+data "Level" "1"
+data "SpellSchool" "Divination"
+data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+data "ContainerSpells" "Shout_PHB2024_ComprehendLanguages_Free;Shout_PHB2024_ComprehendLanguages_Slot"
+data "TargetConditions" "Self()"
+data "Icon" "Spell_Divination_ComprehendLanguages"
+data "DisplayName" "h72f99854g6e85g4a90g9eb6g28e5253e1d12;2"
+data "Description" "hb0ac7326g9de6g4b63ga82aga2d89106fd04;5"
+data "TooltipStatusApply" "ApplyStatus(COMPREHEND_LANGUAGES,100,-1)"
+data "SpellProperties" "ApplyStatus(COMPREHEND_LANGUAGES,100,-1)"
+data "VerbalIntent" "Utility"
+data "SpellAnimation" "dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;bf924cc6-8b39-4c3b-b1c0-eda165cf084b,,;9f0bb95f-2b3e-4f52-b4e0-03122e8ea39d,,;cc5cc960-e388-47fd-be4f-4a3f29aac534,,;,,;0b0dc35b-4814-4f3a-b574-0c768e6a798a,,;,,;,,"
+data "PrepareSound" "Spell_Prepare_Buff_Gen_L1to3"
+data "PrepareLoopSound" "Spell_Prepare_Buff_Gen_L1to3_Loop"
+data "CastSound" "Spell_Cast_Buff_ComprehendLanguages_L1to3"
+data "VocalComponentSound" "Vocal_Component_ComprehendLanguages"
+data "CastTextEvent" "Cast"
+data "RootSpellID" ""
+data "SpellContainerID" ""
+
+// Free cast version - uses the charge (1/long rest)
+new entry "Shout_PHB2024_ComprehendLanguages_Free"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_ComprehendLanguages"
+data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+data "UseCosts" "ActionPoint:1;ComprehendLanguages_Charge:1"
+data "RootSpellID" "Shout_PHB2024_ComprehendLanguages"
+data "SpellContainerID" "Shout_PHB2024_ComprehendLanguages"
+
+// Spell slot version - for casters, hidden if no spell slots
+new entry "Shout_PHB2024_ComprehendLanguages_Slot"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_ComprehendLanguages"
+data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:1"
+data "RequirementConditions" "HasSpellSlot(1,false,false)"
+data "RootSpellID" "Shout_PHB2024_ComprehendLanguages"
+data "SpellContainerID" "Shout_PHB2024_ComprehendLanguages"
+
+new entry "Shout_PHB2024_Strike_Select"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PactOfTheTome"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_PICK,100,-1)"
+data "Icon" "Action_WildMagic_Enchant"
+data "SpellFlags" "ImmediateCast"
+data "RequirementConditions" "not HasStatus('PHB2024_STRIKE_BLOCK')"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa06"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa07"
+
+new entry "Shout_SoG_Base_Option"
+type "SpellData"
+data "SpellType" "Shout"
+data "AIFlags" "CanNotUse"
+data "TargetConditions" "Self()"
+data "DisplayName" "ha89d0bf2g900agc525g2d6ag60946ce1fb76;1"
+data "CastSound" "Action_Cast_ArcaneRecovery"
+data "TargetSound" "Action_Impact_ArcaneRecovery"
+data "PreviewCursor" "Cast"
+data "CastTextEvent" "Cast"
+data "UseCosts" "ActionPoint:1;LearnStrike:1"
+data "SpellAnimation" "03114753-8d91-4c52-8207-728a67cdd59b,,;,,;51c06d74-c048-452a-a248-41a751728e3e,,;e9731a5c-e4ba-4872-8950-36d625061ec3,,;8fcb1f19-a84b-486d-81fa-098aaf7cc9be,,;,,;c5bd6ce6-281c-4314-9f74-9f7bb2f4cf03,,;,,;,,"
+data "VerbalIntent" "Utility"
+data "SpellStyleGroup" "Class"
+data "SpellFlags" "Temporary"
+data "PrepareEffect" "af787096-8656-4495-a6ce-cbd376578069"
+data "CastEffect" "b7fb4cd6-971f-44c0-9447-378092d36b63"
+
+new entry "Shout_SoG_Strike_Cloud_Option"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SoG_Base_Option"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_CLOUD,100,-1)"
+data "Icon" "Spell_Conjuration_CloudOfDaggers"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa0a"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa0b"
+
+new entry "Shout_SoG_Strike_Fire_Option"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SoG_Base_Option"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_FIRE,100,-1)"
+data "Icon" "Spell_Evocation_FireBolt"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa0e"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa0f"
+
+new entry "Shout_SoG_Strike_Frost_Option"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SoG_Base_Option"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_FROST,100,-1)"
+data "Icon" "Spell_Evocation_RayOfFrost"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa10"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa11"
+
+new entry "Shout_SoG_Strike_Hill_Option"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SoG_Base_Option"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_HILL,100,-1)"
+data "Icon" "Action_ChampionChallenge"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa14"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa15"
+
+new entry "Shout_SoG_Strike_Stone_Option"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SoG_Base_Option"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_STONE,100,-1)"
+data "Icon" "Spell_WallOfStone"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa16"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa17"
+
+new entry "Shout_SoG_Strike_Storm_Option"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SoG_Base_Option"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_STRIKE_UNLOCK_STORM,100,-1)"
+data "Icon" "Spell_Evocation_LightningBolt"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa18"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa19"
+
+new entry "Shout_PHB2024_Strike_Cloud"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Strike_Select"
+data "ContainerSpells" ""
+data "SpellFlags" ""
+data "SpellSuccess" "ApplyStatus(SELF,PHB2024_STRIKE_SELECTED,100,-1);ApplyStatus(SELF,PHB2024_STRIKE_CHOSEN_CLOUD,100,-1)"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa0a"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa0b"
+data "SpellContainerID" "Shout_PHB2024_Strike_Select"
+
+// ==================== RUNE SHAPER - INSCRIBE RUNES SHOUT (STEP 2) ====================
+// Main shout that starts the rune selection process - applies the RUNESHAPER status
+// Also applies COMPREHEND_LANGUAGES status which grants the spell permanently
+new entry "Shout_PHB2024_RuneShaper"
+type "SpellData"
+data "SpellType" "Shout"
+data "TargetConditions" "Self()"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNESHAPER,100,-1);ApplyStatus(SELF,PHB2024_COMPREHEND_LANGUAGES,100,-1)"
+data "Icon" "Spell_Divination_ArcaneEye"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa2c"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa2d"
+data "SpellFlags" "ImmediateCast"
+data "UseCosts" "ActionPoint:1"
+
+// ==================== RUNE SHAPER - BASE RUNE PICKER TEMPLATE ====================
+new entry "Shout_PHB2024_Rune_Base"
+type "SpellData"
+data "SpellType" "Shout"
+data "AIFlags" "CanNotUse"
+data "TargetConditions" "Self()"
+data "CastSound" "Action_Cast_ArcaneRecovery"
+data "TargetSound" "Action_Impact_ArcaneRecovery"
+data "PreviewCursor" "Cast"
+data "CastTextEvent" "Cast"
+data "UseCosts" "ActionPoint:1;LearnRunePoint:1"
+data "SpellAnimation" "03114753-8d91-4c52-8207-728a67cdd59b,,;,,;51c06d74-c048-452a-a248-41a751728e3e,,;e9731a5c-e4ba-4872-8950-36d625061ec3,,;8fcb1f19-a84b-486d-81fa-098aaf7cc9be,,;,,;c5bd6ce6-281c-4314-9f74-9f7bb2f4cf03,,;,,;,,"
+data "VerbalIntent" "Utility"
+data "SpellStyleGroup" "Class"
+data "SpellFlags" "Temporary"
+data "PrepareEffect" "af787096-8656-4495-a6ce-cbd376578069"
+data "CastEffect" "b7fb4cd6-971f-44c0-9447-378092d36b63"
+
+// ==================== RUNE SHAPER - 13 RUNE PICKER SHOUTS ====================
+// Cloud Rune - Fog Cloud
+new entry "Shout_PHB2024_Rune_Cloud"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_CLOUD,100,-1)"
+data "Icon" "Spell_Conjuration_FogCloud"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fac1"
+data "Description" "hca12da34eb56fc78ad90bc12de34fac2"
+
+
+// Death Rune - Inflict Wounds
+new entry "Shout_PHB2024_Rune_Death"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_DEATH,100,-1)"
+data "Icon" "Spell_Necromancy_InflictWounds"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fac3"
+data "Description" "hca12da34eb56fc78ad90bc12de34fac4"
+
+
+// Dragon Rune - Chromatic Orb
+new entry "Shout_PHB2024_Rune_Dragon"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_DRAGON,100,-1)"
+data "Icon" "Spell_Evocation_ChromaticOrb"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fac5"
+data "Description" "hca12da34eb56fc78ad90bc12de34fac6"
+
+
+// Enemy Rune - Disguise Self
+new entry "Shout_PHB2024_Rune_Enemy"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_ENEMY,100,-1)"
+data "Icon" "Spell_Illusion_DisguiseSelf"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fac7"
+data "Description" "hca12da34eb56fc78ad90bc12de34fac8"
+
+
+// Fire Rune - Burning Hands
+new entry "Shout_PHB2024_Rune_Fire"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_FIRE,100,-1)"
+data "Icon" "Spell_Evocation_BurningHands"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fac9"
+data "Description" "hca12da34eb56fc78ad90bc12de34faca"
+
+
+// Friend Rune - Speak with Animals
+new entry "Shout_PHB2024_Rune_Friend"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_FRIEND,100,-1)"
+data "Icon" "Spell_Divination_SpeakWithAnimals"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34facb"
+data "Description" "hca12da34eb56fc78ad90bc12de34facc"
+
+
+// Frost Rune - Armor of Agathys
+new entry "Shout_PHB2024_Rune_Frost"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_FROST,100,-1)"
+data "Icon" "Spell_Abjuration_ArmorOfAgathys"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34facd"
+data "Description" "hca12da34eb56fc78ad90bc12de34face"
+
+
+// Hill Rune - Goodberry
+new entry "Shout_PHB2024_Rune_Hill"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_HILL,100,-1)"
+data "Icon" "Spell_Transmutation_Goodberry"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34facf"
+data "Description" "hca12da34eb56fc78ad90bc12de34fad0"
+
+
+// Journey Rune - Longstrider
+new entry "Shout_PHB2024_Rune_Journey"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_JOURNEY,100,-1)"
+data "Icon" "Spell_Transmutation_Longstrider"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fad1"
+data "Description" "hca12da34eb56fc78ad90bc12de34fad2"
+
+
+// King Rune - Command
+new entry "Shout_PHB2024_Rune_King"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_KING,100,-1)"
+data "Icon" "Spell_Abjuration_Banishment"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fad3"
+data "Description" "hca12da34eb56fc78ad90bc12de34fad4"
+
+
+// Mountain Rune - Entangle
+new entry "Shout_PHB2024_Rune_Mountain"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_MOUNTAIN,100,-1)"
+data "Icon" "Spell_Conjuration_Entangled"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fad5"
+data "Description" "hca12da34eb56fc78ad90bc12de34fad6"
+
+
+// Stone Rune - Sanctuary
+new entry "Shout_PHB2024_Rune_Stone"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_STONE,100,-1)"
+data "Icon" "Spell_Abjuration_Sanctuary"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fad7"
+data "Description" "hca12da34eb56fc78ad90bc12de34fad8"
+
+
+// Storm Rune - Thunderwave
+new entry "Shout_PHB2024_Rune_Storm"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PHB2024_Rune_Base"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_RUNE_UNLOCK_STORM,100,-1)"
+data "Icon" "Spell_Evocation_Thunderwave"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fad9"
+data "Description" "hca12da34eb56fc78ad90bc12de34fada"
+
+
+// ==================== EMBER OF FIRE GIANT - SEARING IGNITION ====================
+// Replace an attack with 15ft cone/burst, Dex save, 1d8+prof fire + blind
+new entry "Shout_PHB2024_SearingIgnition"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa44"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa45"
+data "DescriptionParams" "DealDamage(1d8+ProficiencyBonus,Fire)"
+data "Icon" "Spell_Evocation_BurningHands"
+data "TooltipDamageList" "DealDamage(1d8+ProficiencyBonus,Fire)"
+data "TooltipStatusApply" "ApplyStatus(BLIND,100,1)"
+data "UseCosts" "ActionPoint:1;SearingIgnition_Charge:1"
+data "SpellProperties" "ApplyStatus(SELF,FIRE_SHIELD_WARM,100,1)"
+data "SpellRoll" "SavingThrow(Ability.Dexterity,SourceSpellDC(),HalfDamageOnSave)"
+data "SpellSuccess" "DealDamage(1d8+ProficiencyBonus,Fire,Magical);ApplyStatus(BLIND,100,1)"
+data "SpellFail" "DealDamage((1d8+ProficiencyBonus)/2,Fire,Magical)"
+data "TargetRadius" "5"
+data "AreaRadius" "5"
+data "SpellFlags" "HasHighGroundRangeExtension;HasSomaticComponent;HasVerbalComponent;IsSpell"
+data "TargetConditions" "not Self() and Character()"
+data "VerbalIntent" "Damage"
+data "SpellStyleGroup" "Class"
+data "Cooldown" "None"
+
+// ==================== SOUL OF STORM GIANT - MAELSTROM AURA ====================
+// Bonus action self-buff, resist lightning/thunder, attackers have disadvantage, slow nearby enemies
+new entry "Shout_PHB2024_MaelstromAura"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa82"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa83"
+data "Icon" "Spell_Evocation_LightningBolt"
+data "UseCosts" "BonusActionPoint:1;MaelstromAura_Charge:1"
+data "SpellProperties" "ApplyStatus(SELF,PHB2024_MAELSTROM_AURA,100,2)"
+data "TooltipStatusApply" "ApplyStatus(PHB2024_MAELSTROM_AURA,100,2)"
+data "TargetConditions" "Self()"
+data "SpellFlags" "IsMagical;IsSelf"
+data "Cooldown" "None"
+data "VerbalIntent" "Buff"
+data "SpellStyleGroup" "Class"
+data "CastEffect" "10fc784a-4312-47a8-a6b8-6b529c646ac4"
+data "TargetEffect" "a3e2368b-f486-4cfc-b04a-b02e23383280"
+data "PositionEffect" "de5e4e60-e2b7-44f4-aca8-c11390b4cc48"
+data "CastSound" "Spell_Cast_Damage_Lightning_CallLightning_L1to3"

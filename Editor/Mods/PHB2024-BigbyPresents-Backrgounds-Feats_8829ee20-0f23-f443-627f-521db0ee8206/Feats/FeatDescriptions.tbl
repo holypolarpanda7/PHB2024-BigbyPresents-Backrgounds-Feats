@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="0bc6c1c1-edc3-45ae-badf-12732a57c361">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa01" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa00" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="StrikeOfTheGiants"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b25"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b26"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="23e0acdd-a05d-41ba-ab57-cbcd9520db2b"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="23e0acdd-a05d-41ba-ab57-cbcd9520db2b"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa21" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa20" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="RuneCarver"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ab"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ac"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="9c86ab02-9257-4d55-879a-a1f2daea0dff"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="9c86ab02-9257-4d55-879a-a1f2daea0dff"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa41" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa40" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="EmberOfTheFireGiant"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="a1b2c3d4-e5f6-7890-abcd-ef1234567891"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="fb1481f6-ced5-4bf3-af9d-d74b5d75f9a0"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="fb1481f6-ced5-4bf3-af9d-d74b5d75f9a0"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa51" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa50" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="FuryOfTheFrostGiant"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="b2c3d4e5-f6a7-8901-bcde-f23456789012"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="b2c3d4e5-f6a7-8901-bcde-f23456789013"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="d7c4e5b5-6476-4604-a6b5-3cb42970bae9"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="d7c4e5b5-6476-4604-a6b5-3cb42970bae9"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa61" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa60" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="GuileOfTheCloudGiant"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="c3d4e5f6-a7b8-9012-cdef-345678901234"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="c3d4e5f6-a7b8-9012-cdef-345678901235"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="a599c4c0-7b4f-4997-ac71-95d3a948ae27"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="a599c4c0-7b4f-4997-ac71-95d3a948ae27"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa71" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa70" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="KeennessOfTheStoneGiant"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="d4e5f6a7-b8c9-0123-defa-456789012345"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="d4e5f6a7-b8c9-0123-defa-456789012346"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="6435891c-e703-464a-afb4-259fc23944e6"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="6435891c-e703-464a-afb4-259fc23944e6"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa81" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa80" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="SoulOfTheStormGiant"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="e5f6a7b8-c9d0-1234-efab-567890123456"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="e5f6a7b8-c9d0-1234-efab-567890123457"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="8bdd16c4-ba0a-4840-af32-6cce96a749ac"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="8bdd16c4-ba0a-4840-af32-6cce96a749ac"></field>
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa91" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca12da34eb56fc78ad90bc12de34fa90" version="1"></field>
+        <field name="ExactMatch" type="FixedStringTableFieldDefinition" value="VigorOfTheHillGiant"></field>
+        <field name="FeatId" type="GuidTableFieldDefinition" value="f6a7b8c9-d0e1-2345-fabc-678901234567"></field>
+        <field name="UUID" type="IdTableFieldDefinition" value="f6a7b8c9-d0e1-2345-fabc-678901234568"></field>
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="9a93bcf8-5e0f-40d5-8bb3-5c9af8f1c195"></field>
+        <field name="Name" type="NameTableFieldDefinition" value="9a93bcf8-5e0f-40d5-8bb3-5c9af8f1c195"></field>
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

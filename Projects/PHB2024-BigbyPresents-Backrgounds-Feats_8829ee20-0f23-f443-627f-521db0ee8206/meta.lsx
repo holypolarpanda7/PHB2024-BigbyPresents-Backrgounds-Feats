@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="GameProject" type="LSString" value=""/>
+            <attribute id="Module" type="LSString" value="8829ee20-0f23-f443-627f-521db0ee8206"/>
+            <attribute id="Name" type="LSString" value="PHB2024-BigbyPresents-Backrgounds-Feats"/>
+            <attribute id="UUID" type="LSString" value="7d6a4b74-e064-cfbd-bc29-34c02351a120"/>
+            <attribute id="UpdatedDependencies" type="bool" value="true"/>
+            <children>
+                <node id="Categories"/>
+            </children>
+        </node>
+    </region>
+</save>
