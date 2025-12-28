@@ -12,17 +12,18 @@
         <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_PHB2024_ComprehendLanguages_Free;Shout_PHB2024_ComprehendLanguages_Slot"></field>
         <field name="TargetConditions" type="StringTableFieldDefinition" value="Self()"></field>
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Divination_ComprehendLanguages"></field>
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="h72f99854g6e85g4a90g9eb6g28e5253e1d12" version="1"></field>
-        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hb0ac7326g9de6g4b63ga82aga2d89106fd04" version="1"></field>
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" value="" handle="h04d9e59cgae0bg436fgb641g42422aca1383" version="1"></field>
+        <field name="Description" type="TranslatedStringTableFieldDefinition" value="" handle="hf74f3988g4189g4152g9c33gf408303352dc" version="2"></field>
         <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(COMPREHEND_LANGUAGES,100,-1)"></field>
         <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(COMPREHEND_LANGUAGES,100,-1)"></field>
         <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Utility" enumeration_type_name="VerbalIntent" version="1"></field>
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;bf924cc6-8b39-4c3b-b1c0-eda165cf084b,,;9f0bb95f-2b3e-4f52-b4e0-03122e8ea39d,,;cc5cc960-e388-47fd-be4f-4a3f29aac534,,;,,;0b0dc35b-4814-4f3a-b574-0c768e6a798a,,;,,;,,"></field>
-        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Buff_Gen_L1to3"></field>
-        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Buff_Gen_L1to3_Loop"></field>
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_ComprehendLanguages_L1to3"></field>
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;236087a5-5597-4ee7-ab06-75b01147f596,,;ee0b6a78-c6b6-4852-aecb-d7c474a37d68,,;cc5b0caf-3ed1-4711-a50d-11dc3f1fdc6a,,;,,;1715b877-4512-472e-9bd0-fd568a112e90,,;,,;,,"></field>
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Utility_ComprehendLanguages_L1to3"></field>
+        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Utility_ComprehendLanguages_L1to3"></field>
         <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_ComprehendLanguages"></field>
         <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast"></field>
+        <field name="PrepareEffect" type="StringTableFieldDefinition" value="7121a488-7c9a-4ba1-a585-f79aaa77e97c"></field>
+        <field name="CastEffect" type="StringTableFieldDefinition" value="e918985b-1855-4543-ba15-e7890ee5d649"></field>
         <field name="RootSpellID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
         <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
       </fields>
