@@ -91,7 +91,9 @@
   <content contentuid="hca12da34eb56fc78ad90bc12de34fa92" version="1">Bulwark</content>
   <content contentuid="hca12da34eb56fc78ad90bc12de34fa93" version="1">Bulwark — When an effect would push you or knock you prone, expend a reaction and a charge to brace yourself. You instead resist the forced movement or falling prone, remaining upright and secure against the effect.</content>
   <content contentuid="hca12da34eb56fc78ad90bc12de34fa94" version="1">Iron Stomach</content>
-  <content contentuid="hca12da34eb56fc78ad90bc12de34fa95" version="1">Iron Stomach — During a short rest, when you consume food and spend Hit Dice, you regain additional hit points equal to your Constitution modifier plus your Proficiency Bonus. Your hardy digestion reflects hill-giant resilience.</content>
+  <content contentuid="hca12da34eb56fc78ad90bc12de34fa95" version="1">Iron Stomach — During a short rest, you regain additional hit points equal to your Constitution modifier plus your Proficiency Bonus. Additionally, you gain [1] temporary hit points. Your hardy digestion reflects hill-giant resilience.</content>
+  <content contentuid="hca12da34eb56fc78ad90bc12de34fa96" version="1">Iron Stomach: Fortified</content>
+  <content contentuid="hca12da34eb56fc78ad90bc12de34fa97" version="1">You have gained temporary hit points equal to your Proficiency Bonus from Iron Stomach after a short rest.</content>
   
   <content contentuid="hca12da34eb56fc78ad90bc12de34fadb" version="1">Learn Rune</content>
   <content contentuid="hca12da34eb56fc78ad90bc12de34fadc" version="1">Comprehend Languages Rune</content>
