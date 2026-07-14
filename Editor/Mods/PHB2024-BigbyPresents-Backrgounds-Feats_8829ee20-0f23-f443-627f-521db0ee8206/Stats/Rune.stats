@@ -69,12 +69,10 @@
         <field name="UUID" type="IdTableFieldDefinition" value="cd9da52d-aab6-4ce4-8768-c1c21370e884"></field>
         <field name="Name" type="NameTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds_Slot"></field>
         <field name="SpellType" type="" value="Target"></field>
-        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="Target_InflictWounds"></field>
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
-        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
-        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_PHB2024_Rune_InflictWounds"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_InflictWounds"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -183,12 +181,10 @@
         <field name="UUID" type="IdTableFieldDefinition" value="8b64c509-feab-4260-8310-c6e08e407f13"></field>
         <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands_Slot"></field>
         <field name="SpellType" type="" value="Zone"></field>
-        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="Zone_BurningHands"></field>
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
-        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
-        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_BurningHands"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_BurningHands"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -259,12 +255,10 @@
         <field name="UUID" type="IdTableFieldDefinition" value="6458be65-0d83-4603-9cf2-682cb195e85b"></field>
         <field name="Name" type="NameTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys_Slot"></field>
         <field name="SpellType" type="" value="Shout"></field>
-        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="Shout_ArmorOfAgathys"></field>
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
-        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
-        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Shout_PHB2024_Rune_ArmorOfAgathys"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Shout_ArmorOfAgathys"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -487,12 +481,10 @@
         <field name="UUID" type="IdTableFieldDefinition" value="3090ddfd-b94f-439d-83ac-42bc15b3a1f1"></field>
         <field name="Name" type="NameTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave_Slot"></field>
         <field name="SpellType" type="" value="Zone"></field>
-        <field name="Using" type="BaseClassTableFieldDefinition" value=""></field>
+        <field name="Using" type="BaseClassTableFieldDefinition" value="Zone_Thunderwave"></field>
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1"></field>
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1"></field>
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasSpellSlot(1,false,false)"></field>
-        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
-        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Zone_PHB2024_Rune_Thunderwave"></field>
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Zone_Thunderwave"></field>
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="" clear_inherited_value="true"></field>
       </fields>
     </stat_object>
   </stat_objects>

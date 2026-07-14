@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="0"/>
+    <region id="SpellLists">
+        <node id="root">
+            <children>
+                <!-- Rune Shaper Spell Lists for Upcastable Spells -->
+                
+                <!-- Storm Rune - Thunderwave -->
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Rune_Thunderwave_SpellList"/>
+                    <attribute id="Spells" type="LSString" value="Zone_Thunderwave"/>
+                    <attribute id="UUID" type="guid" value="a1b2c3d4-1111-4444-8888-000000000001"/>
+                </node>
+                
+                <!-- Fire Rune - Burning Hands -->
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Rune_BurningHands_SpellList"/>
+                    <attribute id="Spells" type="LSString" value="Zone_BurningHands"/>
+                    <attribute id="UUID" type="guid" value="a1b2c3d4-1111-4444-8888-000000000002"/>
+                </node>
+                
+                <!-- Frost Rune - Armor of Agathys -->
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Rune_ArmorOfAgathys_SpellList"/>
+                    <attribute id="Spells" type="LSString" value="Shout_ArmorOfAgathys"/>
+                    <attribute id="UUID" type="guid" value="a1b2c3d4-1111-4444-8888-000000000003"/>
+                </node>
+                
+                <!-- Death Rune - Inflict Wounds -->
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Rune_InflictWounds_SpellList"/>
+                    <attribute id="Spells" type="LSString" value="Target_InflictWounds"/>
+                    <attribute id="UUID" type="guid" value="a1b2c3d4-1111-4444-8888-000000000004"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
