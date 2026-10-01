@@ -43,6 +43,7 @@ Storm	Lightning infusion (electrical crackling)
 - Requires Baldur's Gate 3
 - Compatible with PHB 2024 mods
 - Should work with most other mods
+- **Script Extender:** not required right now. Later versions may use [BG3 Script Extender](https://github.com/Norbyte/bg3se) to fix behavior that stats files alone can't handle. If that happens, the affected features will be listed here. See `CLAUDE.md` for the development policy.
 
 ## File Structure
 
