@@ -43,7 +43,15 @@ Storm	Lightning infusion (electrical crackling)
 - Requires Baldur's Gate 3
 - Compatible with PHB 2024 mods
 - Should work with most other mods
-- **Script Extender:** not required right now. Later versions may use [BG3 Script Extender](https://github.com/Norbyte/bg3se) to fix behavior that stats files alone can't handle. If that happens, the affected features will be listed here. See `CLAUDE.md` for the development policy.
+- **Script Extender:** optional, but recommended. With [BG3 Script Extender](https://github.com/Norbyte/bg3se) installed, these features work closer to the rules:
+
+  | Feature | With Script Extender | Without it |
+  |---|---|---|
+  | Bulwark (Vigor of the Hill Giant) | If the effect still pushes you, you are moved back to where you stood. | Prone is prevented, but you can still be pushed. |
+  | Cloudy Escape (Guile of the Cloud Giant) | Also ends when you use an item. | Ends when you move, cast, attack or end your turn. |
+  | Iron Stomach (Vigor of the Hill Giant) | The first time you eat food after each rest, you regain Con mod + Proficiency Bonus HP. The short-rest temp HP is also cleared on long rest. | Only the short-rest bonus. |
+
+  Everything else works the same with or without it. See `CLAUDE.md` for the development policy.
 
 ## File Structure
 

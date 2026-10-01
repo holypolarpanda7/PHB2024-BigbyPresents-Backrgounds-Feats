@@ -309,6 +309,7 @@ data "StatusGroups" "SG_Condition"
 
 // ==================== GUILE OF CLOUD GIANT STATUS ====================
 // Gaseous form - damage resistance, free Misty Step. Ends on move/action/turn end
+// Script Extender: BootstrapServer.lua (Cloudy Escape) also ends it when you use an item.
 new entry "PHB2024_CLOUDY_ESCAPE"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -361,6 +362,8 @@ data "StatusEffect" "d4b8c77a-6b07-4b8a-94de-eb1e949dc5b6"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 // ==================== VIGOR OF HILL GIANT STATUS ====================
+// Applied by Interrupt_PHB2024_Bulwark for 1 turn: prevents and removes Prone.
+// (DOWNED is no longer removed here - that would revive a character at 0 HP.)
 new entry "PHB2024_BULWARK_RESIST"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -369,7 +372,8 @@ data "Description" "hca12da34eb56fc78ad90bc12de34fa93"
 data "Icon" "Action_ChampionChallenge"
 data "StackId" "PHB2024_BULWARK_RESIST"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "OnApplyFunctors" "RemoveStatus(PRONE);RemoveStatus(DOWNED);RemoveStatus(SLOWED);RemoveStatus(PHB2024_MAELSTROM_SLOWED)"
+data "Boosts" "StatusImmunity(PRONE)"
+data "OnApplyFunctors" "RemoveStatus(PRONE);RemoveStatus(SLOWED);RemoveStatus(PHB2024_MAELSTROM_SLOWED)"
 
 // Iron Stomach - Temporary HP status (applied on short rest)
 new entry "PHB2024_IRON_STOMACH_TEMP_HP"
@@ -382,3 +386,22 @@ data "StackId" "PHB2024_IRON_STOMACH_TEMP_HP"
 data "Boosts" "TemporaryHP(ProficiencyBonus)"
 data "RemoveConditions" "not HasTemporaryHP()"
 data "RemoveEvents" "OnLongRest"
+
+// Iron Stomach - meal bonus. Applied by Script Extender (BootstrapServer.lua, Iron Stomach)
+// the first time you eat food after a rest. Without Script Extender these are never applied.
+new entry "PHB2024_IRON_STOMACH_MEAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa98"
+data "Description" "hca12da34eb56fc78ad90bc12de34fa99"
+data "Icon" "Action_ChampionChallenge"
+data "StackId" "PHB2024_IRON_STOMACH_MEAL"
+data "OnApplyFunctors" "RegainHitPoints(ProficiencyBonus+ConstitutionModifier)"
+data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator"
+
+// Hidden marker: meal bonus already used since the last rest (cleared by Script Extender on rest)
+new entry "PHB2024_IRON_STOMACH_FED"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "PHB2024_IRON_STOMACH_FED"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

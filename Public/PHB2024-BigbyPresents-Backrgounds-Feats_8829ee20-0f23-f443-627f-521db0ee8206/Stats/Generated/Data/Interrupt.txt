@@ -134,6 +134,7 @@ data "InterruptFlags" "Extinguish"
 
 // ==================== VIGOR OF HILL GIANT - BULWARK ====================
 // Reaction to resist push or prone effects (Strength saving throws)
+// Script Extender: BootstrapServer.lua (Bulwark) moves you back if the effect still pushed you.
 new entry "Interrupt_PHB2024_Bulwark"
 type "InterruptData"
 data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa92"
@@ -143,7 +144,7 @@ data "InterruptContext" "OnPostRoll"
 data "InterruptContextScope" "Self"
 data "Container" "YesNoDecision"
 data "Conditions" "IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and not Self(context.Source,context.Observer) and HasInterruptedSavingThrow() and HasSavingThrowWithAbility(Ability.Strength) and not AnyEntityIsItem() and IsRerollInterruptInteresting()"
-data "Properties" "SetReroll(19,true);ApplyStatus(SELF,PHB2024_BULWARK_VFX,100,1)"
+data "Properties" "SetReroll(19,true);ApplyStatus(SELF,PHB2024_BULWARK_VFX,100,1);ApplyStatus(SELF,PHB2024_BULWARK_RESIST,100,1)"
 data "Cost" "Bulwark_Charge:1;ReactionActionPoint:1"
 data "Stack" "PHB2024_Bulwark"
 data "InterruptDefaultValue" "Enabled"

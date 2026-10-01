@@ -295,6 +295,7 @@ data "Properties" "Highlighted"
 data "BoostContext" "OnCreate;OnLongRest"
 data "Boosts" "UnlockInterrupt(Interrupt_PHB2024_Bulwark);ActionResource(Bulwark_Charge,2,0);IF(CharacterLevelGreaterThan(4)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(8)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(12)):ActionResource(Bulwark_Charge,1,0);IF(CharacterLevelGreaterThan(16)):ActionResource(Bulwark_Charge,1,0)"
 
+// Script Extender: BootstrapServer.lua (Iron Stomach) adds the bonus when eating food.
 new entry "PHB2024_IronStomach"
 type "PassiveData"
 data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa94"
