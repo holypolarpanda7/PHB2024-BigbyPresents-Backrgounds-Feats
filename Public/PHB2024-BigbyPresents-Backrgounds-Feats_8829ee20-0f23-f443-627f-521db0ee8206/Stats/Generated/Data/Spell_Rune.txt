@@ -7,7 +7,7 @@
 // Hand-made "_Slot" container variants were removed: they only checked regular
 // SpellSlot resources, all showed as level 1, and could not be upcast properly.
 // Chromatic Orb and Command are vanilla containers (per element / per command), so
-// they still use their own Free/Slot container setup.
+// their free rune spell is a matching container whose children use the rune charge.
 
 // ==================== FOG CLOUD (Cloud Rune) ====================
 new entry "Target_PHB2024_Rune_FogCloud"
@@ -30,34 +30,64 @@ data "RootSpellID" ""
 data "SpellContainerID" ""
 
 // ==================== CHROMATIC ORB (Dragon Rune) ====================
+// Vanilla spell is a container (one child per option), so the free cast mirrors it:
+// a rune container whose children use the rune charge instead of spell slots.
 new entry "Projectile_PHB2024_Rune_ChromaticOrb"
 type "SpellData"
 data "SpellType" "Projectile"
 using "Projectile_ChromaticOrb"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;HasHighGroundRangeExtension;IsLinkedSpellContainer"
-data "ContainerSpells" "Projectile_PHB2024_Rune_ChromaticOrb_Free;Projectile_PHB2024_Rune_ChromaticOrb_Slot"
 data "DisplayName" "hca12da34eb56fc78ad90bc12de34fac5"
-data "UseCosts" ""
+data "ContainerSpells" "Projectile_PHB2024_Rune_ChromaticOrb_Acid;Projectile_PHB2024_Rune_ChromaticOrb_Cold;Projectile_PHB2024_Rune_ChromaticOrb_Fire;Projectile_PHB2024_Rune_ChromaticOrb_Lightning;Projectile_PHB2024_Rune_ChromaticOrb_Poison;Projectile_PHB2024_Rune_ChromaticOrb_Thunder"
+data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
 data "RootSpellID" ""
 data "SpellContainerID" ""
 
-new entry "Projectile_PHB2024_Rune_ChromaticOrb_Free"
+new entry "Projectile_PHB2024_Rune_ChromaticOrb_Acid"
 type "SpellData"
 data "SpellType" "Projectile"
-using "Projectile_ChromaticOrb"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;HasHighGroundRangeExtension;IsLinkedSpellContainer"
+using "Projectile_ChromaticOrb_Acid"
 data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
-data "RootSpellID" "Projectile_PHB2024_Rune_ChromaticOrb"
+data "RootSpellID" ""
 data "SpellContainerID" "Projectile_PHB2024_Rune_ChromaticOrb"
 
-new entry "Projectile_PHB2024_Rune_ChromaticOrb_Slot"
+new entry "Projectile_PHB2024_Rune_ChromaticOrb_Cold"
 type "SpellData"
 data "SpellType" "Projectile"
-using "Projectile_ChromaticOrb"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful;HasHighGroundRangeExtension;IsLinkedSpellContainer"
-data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:1"
-data "RequirementConditions" "HasActionResource('SpellSlot',1,1,false,false)"
-data "RootSpellID" "Projectile_PHB2024_Rune_ChromaticOrb"
+using "Projectile_ChromaticOrb_Cold"
+data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Projectile_PHB2024_Rune_ChromaticOrb"
+
+new entry "Projectile_PHB2024_Rune_ChromaticOrb_Fire"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_ChromaticOrb_Fire"
+data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Projectile_PHB2024_Rune_ChromaticOrb"
+
+new entry "Projectile_PHB2024_Rune_ChromaticOrb_Lightning"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_ChromaticOrb_Lightning"
+data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Projectile_PHB2024_Rune_ChromaticOrb"
+
+new entry "Projectile_PHB2024_Rune_ChromaticOrb_Poison"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_ChromaticOrb_Poison"
+data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Projectile_PHB2024_Rune_ChromaticOrb"
+
+new entry "Projectile_PHB2024_Rune_ChromaticOrb_Thunder"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_ChromaticOrb_Thunder"
+data "UseCosts" "ActionPoint:1;Rune_ChromaticOrb_Charge:1"
+data "RootSpellID" ""
 data "SpellContainerID" "Projectile_PHB2024_Rune_ChromaticOrb"
 
 // ==================== DISGUISE SELF (Enemy Rune) ====================
@@ -121,34 +151,56 @@ data "RootSpellID" ""
 data "SpellContainerID" ""
 
 // ==================== COMMAND (King Rune) ====================
+// Vanilla spell is a container (one child per option), so the free cast mirrors it:
+// a rune container whose children use the rune charge instead of spell slots.
 new entry "Target_PHB2024_Rune_Command"
 type "SpellData"
 data "SpellType" "Target"
 using "Target_Command_Container"
-data "SpellFlags" "IsSpell;HasVerbalComponent;IsHarmful;IsConcentration;IsLinkedSpellContainer"
-data "ContainerSpells" "Target_PHB2024_Rune_Command_Free;Target_PHB2024_Rune_Command_Slot"
 data "DisplayName" "hca12da34eb56fc78ad90bc12de34fad3"
-data "UseCosts" ""
+data "ContainerSpells" "Target_PHB2024_Rune_Command_Approach;Target_PHB2024_Rune_Command_Drop;Target_PHB2024_Rune_Command_Flee;Target_PHB2024_Rune_Command_Grovel;Target_PHB2024_Rune_Command_Halt"
+data "UseCosts" "ActionPoint:1;Rune_Command_Charge:1"
 data "RootSpellID" ""
 data "SpellContainerID" ""
 
-new entry "Target_PHB2024_Rune_Command_Free"
+new entry "Target_PHB2024_Rune_Command_Approach"
 type "SpellData"
 data "SpellType" "Target"
-using "Target_Command_Container"
-data "SpellFlags" "IsSpell;HasVerbalComponent;IsHarmful;IsConcentration;IsLinkedSpellContainer"
+using "Target_Command_Approach"
 data "UseCosts" "ActionPoint:1;Rune_Command_Charge:1"
-data "RootSpellID" "Target_PHB2024_Rune_Command"
+data "RootSpellID" ""
 data "SpellContainerID" "Target_PHB2024_Rune_Command"
 
-new entry "Target_PHB2024_Rune_Command_Slot"
+new entry "Target_PHB2024_Rune_Command_Drop"
 type "SpellData"
 data "SpellType" "Target"
-using "Target_Command_Container"
-data "SpellFlags" "IsSpell;HasVerbalComponent;IsHarmful;IsConcentration;IsLinkedSpellContainer"
-data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:1"
-data "RequirementConditions" "HasActionResource('SpellSlot',1,1,false,false)"
-data "RootSpellID" "Target_PHB2024_Rune_Command"
+using "Target_Command_Drop"
+data "UseCosts" "ActionPoint:1;Rune_Command_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Target_PHB2024_Rune_Command"
+
+new entry "Target_PHB2024_Rune_Command_Flee"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Command_Flee"
+data "UseCosts" "ActionPoint:1;Rune_Command_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Target_PHB2024_Rune_Command"
+
+new entry "Target_PHB2024_Rune_Command_Grovel"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Command_Grovel"
+data "UseCosts" "ActionPoint:1;Rune_Command_Charge:1"
+data "RootSpellID" ""
+data "SpellContainerID" "Target_PHB2024_Rune_Command"
+
+new entry "Target_PHB2024_Rune_Command_Halt"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Command_Halt"
+data "UseCosts" "ActionPoint:1;Rune_Command_Charge:1"
+data "RootSpellID" ""
 data "SpellContainerID" "Target_PHB2024_Rune_Command"
 
 // ==================== ENTANGLE (Mountain Rune) ====================

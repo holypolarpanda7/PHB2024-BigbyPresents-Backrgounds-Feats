@@ -91,14 +91,14 @@ data "Conditions" "HasUseCosts('LearnRunePoint')"
 data "StatsFunctors" "IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):ApplyStatus(SELF,PHB2024_RUNESHAPER_BLOCK,100,-1);IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):RemoveStatus(SELF,PHB2024_RUNESHAPER)"
 
 // Comprehend Languages unlock - granted via PHB2024_COMPREHEND_LANGUAGES status
-// Unlocks our custom container spell with Free/Slot variants
+// Unlocks the free-cast spell and the spell-slot spell
 new entry "PHB2024_RuneShaper_ComprehendLanguages"
 type "PassiveData"
 data "DisplayName" "hca12da34eb56fc78ad90bc12de34fadc"
 data "Description" "hca12da34eb56fc78ad90bc12de34fadd"
 data "Icon" "Spell_Divination_ComprehendLanguages"
 data "Properties" "Highlighted"
-data "Boosts" "UnlockSpell(Shout_PHB2024_ComprehendLanguages)"
+data "Boosts" "UnlockSpell(Shout_PHB2024_ComprehendLanguages);UnlockSpell(Shout_PHB2024_ComprehendLanguages_Slot)"
 
 // Comprehend Languages charge - separate passive for the resource
 new entry "PHB2024_RuneShaper_ComprehendLanguages_Charge"
@@ -110,8 +110,8 @@ data "Boosts" "ActionResource(ComprehendLanguages_Charge,1,0)"
 // ==================== RUNE SHAPER UNLOCK PASSIVES ====================
 // Each rune grants its spell AND the charge for that rune (1/long rest)
 // BG3 automatically uses highest spellcasting modifier for granted spells.
-// Most runes also unlock the vanilla spell so casters can cast it with spell slots
-// (including Warlock slots) and upcast it. Chromatic Orb / Command use containers.
+// Each rune also unlocks the vanilla spell so casters can cast it with spell slots
+// (including Warlock slots) and upcast it.
 // NOTE: BoostContext is only for resource grants - UnlockSpell works without it
 
 // FOG CLOUD (Cloud Rune)
@@ -133,7 +133,7 @@ new entry "PHB2024_Rune_Unlock_ChromaticOrb"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb);ActionResource(Rune_ChromaticOrb_Charge,1,0)"
+data "Boosts" "UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb);UnlockSpell(Projectile_ChromaticOrb);ActionResource(Rune_ChromaticOrb_Charge,1,0)"
 
 // DISGUISE SELF (Enemy Rune)
 new entry "PHB2024_Rune_Unlock_DisguiseSelf"
@@ -182,7 +182,7 @@ new entry "PHB2024_Rune_Unlock_Command"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Command);ActionResource(Rune_Command_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Command);UnlockSpell(Target_Command_Container);ActionResource(Rune_Command_Charge,1,0)"
 
 // ENTANGLE (Mountain Rune)
 new entry "PHB2024_Rune_Unlock_Entangle"

@@ -1,17 +1,17 @@
 // ==================== RUNE SHAPER - COMPREHEND LANGUAGES ====================
-// Container spell pattern matching other rune spells:
-// - Container spell (what gets unlocked, shows both options)
-// - Free cast version (uses ComprehendLanguages_Charge, 1/long rest)
-// - Spell slot version (uses spell slots, hidden for non-casters)
+// Two separate spells, both unlocked by PHB2024_RuneShaper_ComprehendLanguages:
+// - Shout_PHB2024_ComprehendLanguages: free cast (ComprehendLanguages_Charge, 1/long rest)
+// - Shout_PHB2024_ComprehendLanguages_Slot: cast with a spell slot (any slot group,
+//   including Warlock slots). Not a container, matching the other rune spells.
 
-// Container spell - this is what gets unlocked
+// Free cast version - uses the charge (1/long rest)
 new entry "Shout_PHB2024_ComprehendLanguages"
 type "SpellData"
 data "SpellType" "Shout"
 data "Level" "1"
 data "SpellSchool" "Divination"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
-data "ContainerSpells" "Shout_PHB2024_ComprehendLanguages_Free;Shout_PHB2024_ComprehendLanguages_Slot"
+data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent"
+data "UseCosts" "ActionPoint:1;ComprehendLanguages_Charge:1"
 data "TargetConditions" "Self()"
 data "Icon" "Spell_Divination_ComprehendLanguages"
 data "DisplayName" "h04d9e59cgae0bg436fgb641g42422aca1383;1"
@@ -29,26 +29,14 @@ data "CastEffect" "e918985b-1855-4543-ba15-e7890ee5d649"
 data "RootSpellID" ""
 data "SpellContainerID" ""
 
-// Free cast version - uses the charge (1/long rest)
-new entry "Shout_PHB2024_ComprehendLanguages_Free"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_PHB2024_ComprehendLanguages"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
-data "UseCosts" "ActionPoint:1;ComprehendLanguages_Charge:1"
-data "RootSpellID" "Shout_PHB2024_ComprehendLanguages"
-data "SpellContainerID" "Shout_PHB2024_ComprehendLanguages"
-
-// Spell slot version - for casters, hidden if no spell slots
+// Spell slot version - greyed out when you have no spell slots
 new entry "Shout_PHB2024_ComprehendLanguages_Slot"
 type "SpellData"
 data "SpellType" "Shout"
 using "Shout_PHB2024_ComprehendLanguages"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
 data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:1"
-data "RequirementConditions" "HasSpellSlot(1,false,false)"
-data "RootSpellID" "Shout_PHB2024_ComprehendLanguages"
-data "SpellContainerID" "Shout_PHB2024_ComprehendLanguages"
+data "RootSpellID" ""
+data "SpellContainerID" ""
 
 new entry "Shout_PHB2024_Strike_Select"
 type "SpellData"
