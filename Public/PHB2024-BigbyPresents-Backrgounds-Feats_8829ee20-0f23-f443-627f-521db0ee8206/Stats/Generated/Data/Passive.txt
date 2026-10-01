@@ -110,7 +110,8 @@ data "Boosts" "ActionResource(ComprehendLanguages_Charge,1,0)"
 // ==================== RUNE SHAPER UNLOCK PASSIVES ====================
 // Each rune grants its spell AND the charge for that rune (1/long rest)
 // BG3 automatically uses highest spellcasting modifier for granted spells.
-// Spellcasters can also use spell slots via the container spell.
+// Most runes also unlock the vanilla spell so casters can cast it with spell slots
+// (including Warlock slots) and upcast it. Chromatic Orb / Command use containers.
 // NOTE: BoostContext is only for resource grants - UnlockSpell works without it
 
 // FOG CLOUD (Cloud Rune)
@@ -118,14 +119,14 @@ new entry "PHB2024_Rune_Unlock_FogCloud"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_FogCloud);ActionResource(Rune_FogCloud_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_FogCloud);UnlockSpell(Target_FogCloud);ActionResource(Rune_FogCloud_Charge,1,0)"
 
 // INFLICT WOUNDS (Death Rune)
 new entry "PHB2024_Rune_Unlock_InflictWounds"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_InflictWounds);ActionResource(Rune_InflictWounds_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_InflictWounds);UnlockSpell(Target_InflictWounds);ActionResource(Rune_InflictWounds_Charge,1,0)"
 
 // CHROMATIC ORB (Dragon Rune)
 new entry "PHB2024_Rune_Unlock_ChromaticOrb"
@@ -139,42 +140,42 @@ new entry "PHB2024_Rune_Unlock_DisguiseSelf"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf);ActionResource(Rune_DisguiseSelf_Charge,1,0)"
+data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf);UnlockSpell(Shout_DisguiseSelf);ActionResource(Rune_DisguiseSelf_Charge,1,0)"
 
 // BURNING HANDS (Fire Rune)
 new entry "PHB2024_Rune_Unlock_BurningHands"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_BurningHands);ActionResource(Rune_BurningHands_Charge,1,0)"
+data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_BurningHands);UnlockSpell(Zone_BurningHands);ActionResource(Rune_BurningHands_Charge,1,0)"
 
 // SPEAK WITH ANIMALS (Friend Rune)
 new entry "PHB2024_Rune_Unlock_SpeakWithAnimals"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals);ActionResource(Rune_SpeakWithAnimals_Charge,1,0)"
+data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals);UnlockSpell(Shout_SpeakWithAnimals);ActionResource(Rune_SpeakWithAnimals_Charge,1,0)"
 
 // ARMOR OF AGATHYS (Frost Rune)
 new entry "PHB2024_Rune_Unlock_ArmorOfAgathys"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys);ActionResource(Rune_ArmorOfAgathys_Charge,1,0)"
+data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys);UnlockSpell(Shout_ArmorOfAgathys);ActionResource(Rune_ArmorOfAgathys_Charge,1,0)"
 
 // GOODBERRY (Hill Rune)
 new entry "PHB2024_Rune_Unlock_Goodberry"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Goodberry);ActionResource(Rune_Goodberry_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Goodberry);UnlockSpell(Target_Goodberry);ActionResource(Rune_Goodberry_Charge,1,0)"
 
 // LONGSTRIDER (Journey Rune)
 new entry "PHB2024_Rune_Unlock_Longstrider"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Longstrider);ActionResource(Rune_Longstrider_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Longstrider);UnlockSpell(Target_Longstrider);ActionResource(Rune_Longstrider_Charge,1,0)"
 
 // COMMAND (King Rune)
 new entry "PHB2024_Rune_Unlock_Command"
@@ -188,21 +189,21 @@ new entry "PHB2024_Rune_Unlock_Entangle"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Entangle);ActionResource(Rune_Entangle_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Entangle);UnlockSpell(Target_Entangle);ActionResource(Rune_Entangle_Charge,1,0)"
 
 // SANCTUARY (Stone Rune)
 new entry "PHB2024_Rune_Unlock_Sanctuary"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Sanctuary);ActionResource(Rune_Sanctuary_Charge,1,0)"
+data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Sanctuary);UnlockSpell(Target_Sanctuary);ActionResource(Rune_Sanctuary_Charge,1,0)"
 
 // THUNDERWAVE (Storm Rune)
 new entry "PHB2024_Rune_Unlock_Thunderwave"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_Thunderwave);ActionResource(Rune_Thunderwave_Charge,1,0)"
+data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_Thunderwave);UnlockSpell(Zone_Thunderwave);ActionResource(Rune_Thunderwave_Charge,1,0)"
 
 // ==================== EMBER OF THE FIRE GIANT ====================
 new entry "PHB2024_EmberFireGiant_Feature"
