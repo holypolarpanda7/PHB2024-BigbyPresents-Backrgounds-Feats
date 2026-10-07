@@ -65,7 +65,7 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Cloud"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_Invis)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
@@ -76,7 +76,7 @@ spell = "Target_PHB2024_StrikeCloud_Invis"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_Invis)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_Invis)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
@@ -277,7 +277,7 @@ spell = "Target_PHB2024_StrikeCloud_TestA"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestA)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestA)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
@@ -288,7 +288,7 @@ spell = "Target_PHB2024_StrikeCloud_TestB"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestB)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestB)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
@@ -299,7 +299,7 @@ spell = "Target_PHB2024_StrikeCloud_TestC"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestC)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestC)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
@@ -310,6 +310,6 @@ spell = "Target_PHB2024_StrikeCloud_TestD"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestD)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestD)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "host", status_applied = ["BLESSED"] }]
 
