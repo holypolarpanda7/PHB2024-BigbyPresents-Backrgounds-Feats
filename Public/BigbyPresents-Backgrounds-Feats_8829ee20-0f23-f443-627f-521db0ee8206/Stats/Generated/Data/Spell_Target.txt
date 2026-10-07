@@ -11,3 +11,15 @@ data "SpellProperties" "GROUND:TeleportSource();GROUND:RemoveStatus(SELF,PHB2024
 data "TargetRadius" "9"
 data "UseCosts" ""
 data "SpellFlags" "HasVerbalComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;Temporary"
+
+// ==================== CLOUD STRIKE - INVISIBILITY ====================
+// Cast by Interrupt_PHB2024_Strike_Cloud on the struck creature: IT rolls the Wisdom save (a status applied to yourself would make
+// YOU roll it), and on a failure the striker turns invisible until the start of their next turn or until they attack or cast.
+new entry "Target_PHB2024_StrikeCloud_Invis"
+type "SpellData"
+data "SpellType" "Target"
+data "AIFlags" "CanNotUse"
+data "TargetConditions" "not Self()"
+data "TooltipAttackSave" "Wisdom"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, GiantStrikeDC())"
+data "SpellSuccess" "SELF:ApplyStatus(PHB2024_STRIKE_CLOUD_INVISIBLE,100,1)"
