@@ -152,6 +152,12 @@
           <attribute id="UUID" type="guid" value="d2d3f7c0-9b4b-4f5e-a9e9-4a0f1c27f4c2"/>
         </node>
         <node id="ActionResourceDefinition">
+          <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb10" version="1"/>
+          <attribute id="Name" type="FixedString" value="LearnRuneAbility"/>
+          <attribute id="ReplenishType" type="FixedString" value="Never"/>
+          <attribute id="UUID" type="guid" value="954668ef-a75b-5446-b14b-1912ba961e5c"/>
+        </node>
+        <node id="ActionResourceDefinition">
           <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa44" version="1"/>
           <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa45" version="1"/>
           <attribute id="IsHidden" type="bool" value="false"/>

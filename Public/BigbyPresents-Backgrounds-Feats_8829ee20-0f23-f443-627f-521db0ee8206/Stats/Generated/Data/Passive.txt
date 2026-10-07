@@ -84,11 +84,10 @@ data "Description" "hca12da34eb56fc78ad90bc12de34fa21"
 data "Icon" "RuneKnight_3_RuneCarver"
 data "Properties" "Highlighted"
 data "BoostContext" "OnCreate"
-data "BoostConditions" "not HasStatus('PHB2024_RUNESHAPER_BLOCK',context.Source)"
-data "Boosts" "UnlockSpell(Shout_PHB2024_RuneShaper)"
+data "Boosts" "IF(not HasStatus('PHB2024_RUNESHAPER_BLOCK',context.Source)):UnlockSpell(Shout_PHB2024_RuneShaper);IF(not HasStatus('PHB2024_RUNE_ABILITY_BLOCK',context.Source)):UnlockSpell(Shout_PHB2024_RuneAbility_Select)"
 data "StatsFunctorContext" "OnCast"
-data "Conditions" "HasUseCosts('LearnRunePoint')"
-data "StatsFunctors" "IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):ApplyStatus(SELF,PHB2024_RUNESHAPER_BLOCK,100,-1);IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):RemoveStatus(SELF,PHB2024_RUNESHAPER)"
+data "Conditions" "HasUseCosts('LearnRunePoint') or HasUseCosts('LearnRuneAbility')"
+data "StatsFunctors" "IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):ApplyStatus(SELF,PHB2024_RUNESHAPER_BLOCK,100,-1);IF(not HasActionResource('LearnRunePoint', 1, 0, false) and HasUseCosts('LearnRunePoint')):RemoveStatus(SELF,PHB2024_RUNESHAPER);IF(not HasActionResource('LearnRuneAbility', 1, 0, false) and HasUseCosts('LearnRuneAbility')):ApplyStatus(SELF,PHB2024_RUNE_ABILITY_BLOCK,100,-1);IF(not HasActionResource('LearnRuneAbility', 1, 0, false) and HasUseCosts('LearnRuneAbility')):RemoveStatus(SELF,PHB2024_RUNE_ABILITY_PICK)"
 
 // Comprehend Languages unlock - granted via PHB2024_COMPREHEND_LANGUAGES status
 // Unlocks our custom container spell with Free/Slot variants
@@ -98,7 +97,8 @@ data "DisplayName" "hca12da34eb56fc78ad90bc12de34fadc"
 data "Description" "hca12da34eb56fc78ad90bc12de34fadd"
 data "Icon" "Spell_Divination_ComprehendLanguages"
 data "Properties" "Highlighted"
-data "Boosts" "UnlockSpell(Shout_PHB2024_ComprehendLanguages)"
+data "BoostContext" "OnCreate;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Shout_PHB2024_ComprehendLanguages,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Shout_PHB2024_ComprehendLanguages,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_ComprehendLanguages,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_ComprehendLanguages)"
 
 // Comprehend Languages charge - separate passive for the resource
 new entry "PHB2024_RuneShaper_ComprehendLanguages_Charge"
@@ -117,92 +117,92 @@ data "Boosts" "ActionResource(ComprehendLanguages_Charge,1,0)"
 new entry "PHB2024_Rune_Unlock_FogCloud"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_FogCloud);ActionResource(Rune_FogCloud_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_FogCloud,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_FogCloud,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_FogCloud,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_FogCloud);ActionResource(Rune_FogCloud_Charge,1,0)"
 
 // INFLICT WOUNDS (Death Rune)
 new entry "PHB2024_Rune_Unlock_InflictWounds"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_InflictWounds);ActionResource(Rune_InflictWounds_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_InflictWounds,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_InflictWounds,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_InflictWounds,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_InflictWounds);ActionResource(Rune_InflictWounds_Charge,1,0)"
 
 // CHROMATIC ORB (Dragon Rune)
 new entry "PHB2024_Rune_Unlock_ChromaticOrb"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb);ActionResource(Rune_ChromaticOrb_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Projectile_PHB2024_Rune_ChromaticOrb);ActionResource(Rune_ChromaticOrb_Charge,1,0)"
 
 // DISGUISE SELF (Enemy Rune)
 new entry "PHB2024_Rune_Unlock_DisguiseSelf"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf);ActionResource(Rune_DisguiseSelf_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_Rune_DisguiseSelf);ActionResource(Rune_DisguiseSelf_Charge,1,0)"
 
 // BURNING HANDS (Fire Rune)
 new entry "PHB2024_Rune_Unlock_BurningHands"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_BurningHands);ActionResource(Rune_BurningHands_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Zone_PHB2024_Rune_BurningHands,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Zone_PHB2024_Rune_BurningHands,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Zone_PHB2024_Rune_BurningHands,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Zone_PHB2024_Rune_BurningHands);ActionResource(Rune_BurningHands_Charge,1,0)"
 
 // SPEAK WITH ANIMALS (Friend Rune)
 new entry "PHB2024_Rune_Unlock_SpeakWithAnimals"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals);ActionResource(Rune_SpeakWithAnimals_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_Rune_SpeakWithAnimals);ActionResource(Rune_SpeakWithAnimals_Charge,1,0)"
 
 // ARMOR OF AGATHYS (Frost Rune)
 new entry "PHB2024_Rune_Unlock_ArmorOfAgathys"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys);ActionResource(Rune_ArmorOfAgathys_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Shout_PHB2024_Rune_ArmorOfAgathys);ActionResource(Rune_ArmorOfAgathys_Charge,1,0)"
 
 // GOODBERRY (Hill Rune)
 new entry "PHB2024_Rune_Unlock_Goodberry"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Goodberry);ActionResource(Rune_Goodberry_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_Goodberry,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_Goodberry,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Goodberry,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Goodberry);ActionResource(Rune_Goodberry_Charge,1,0)"
 
 // LONGSTRIDER (Journey Rune)
 new entry "PHB2024_Rune_Unlock_Longstrider"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Longstrider);ActionResource(Rune_Longstrider_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_Longstrider,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_Longstrider,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Longstrider,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Longstrider);ActionResource(Rune_Longstrider_Charge,1,0)"
 
 // COMMAND (King Rune)
 new entry "PHB2024_Rune_Unlock_Command"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Command);ActionResource(Rune_Command_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_Command,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_Command,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Command,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Command);ActionResource(Rune_Command_Charge,1,0)"
 
 // ENTANGLE (Mountain Rune)
 new entry "PHB2024_Rune_Unlock_Entangle"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Entangle);ActionResource(Rune_Entangle_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_Entangle,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_Entangle,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Entangle,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Entangle);ActionResource(Rune_Entangle_Charge,1,0)"
 
 // SANCTUARY (Stone Rune)
 new entry "PHB2024_Rune_Unlock_Sanctuary"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Target_PHB2024_Rune_Sanctuary);ActionResource(Rune_Sanctuary_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Target_PHB2024_Rune_Sanctuary,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Target_PHB2024_Rune_Sanctuary,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Sanctuary,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Target_PHB2024_Rune_Sanctuary);ActionResource(Rune_Sanctuary_Charge,1,0)"
 
 // THUNDERWAVE (Storm Rune)
 new entry "PHB2024_Rune_Unlock_Thunderwave"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "BoostContext" "OnCreate;OnLongRest"
-data "Boosts" "UnlockSpell(Zone_PHB2024_Rune_Thunderwave);ActionResource(Rune_Thunderwave_Charge,1,0)"
+data "BoostContext" "OnCreate;OnLongRest;OnStatusApplied;OnStatusRemoved"
+data "Boosts" "IF(HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source)):UnlockSpell(Zone_PHB2024_Rune_Thunderwave,,,,Intelligence);IF(HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source)):UnlockSpell(Zone_PHB2024_Rune_Thunderwave,,,,Wisdom);IF(HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Zone_PHB2024_Rune_Thunderwave,,,,Charisma);IF(not HasStatus('PHB2024_RUNE_ABILITY_INT',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_WIS',context.Source) and not HasStatus('PHB2024_RUNE_ABILITY_CHA',context.Source)):UnlockSpell(Zone_PHB2024_Rune_Thunderwave);ActionResource(Rune_Thunderwave_Charge,1,0)"
 
 // ==================== EMBER OF THE FIRE GIANT ====================
 new entry "PHB2024_EmberFireGiant_Feature"

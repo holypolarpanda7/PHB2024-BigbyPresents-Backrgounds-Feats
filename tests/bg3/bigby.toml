@@ -58,15 +58,15 @@ expect = [{ target = "A", damage_type = "Fire" }, { resource = "StrikeOfGiants_C
 [[case]]
 id = "bigby-strike-cloud"
 build = "bigby-fighter"
-title = "Cloud Strike: an extra 1d4 thunder and the target is hindered"
+title = "Cloud Strike: an extra 1d4 thunder; if the TARGET fails a Wisdom save you turn invisible (the host's own save is made unbeatable, so only the target's roll counts)"
 spell = "Target_MainHandAttack"
 target = "A"
 real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Cloud"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
-expect = [{ target = "A", damage_type = "Thunder" }, { target = "A", status_applied = ["PHB2024_STRIKE_CLOUD_EFFECT"] }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", damage_type = "Thunder" }, { target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
 id = "bigby-strike-frost"
@@ -227,3 +227,33 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "host", max_hp = 300 }, { target = "host", passive = "PHB2024_VigorHillGiant_Feature" }, { target = "A", boost = "RollBonus(Attack,30)" }]
 expect = [{ target = "host", status_applied_count = { status = "PRONE", count = [0, 0] } }]
 notes = "Bulwark rerolls a failed Strength save with a minimum of 19; with 2+ uses at level 4 both bites should leave the host standing."
+
+# ---------------------------------------------------------------- Rune Shaper: choosing the spellcasting ability in play
+[[case]]
+id = "bigby-rune-ability-select"
+build = "bigby-fighter"
+title = "Rune Shaper: the Choose Rune Shaper Ability action opens the ability choice (the background grants the feat without one)"
+spell = "Shout_PHB2024_RuneAbility_Select"
+target = "host"
+setup = [{ target = "host", passive = "PHB2024_RuneShaper_Feature" }]
+expect = [{ target = "host", status_applied = ["PHB2024_RUNE_ABILITY_PICK"] }]
+
+[[case]]
+id = "bigby-rune-ability-wisdom"
+build = "bigby-fighter"
+title = "Rune Shaper: picking Wisdom records the choice"
+spell = "Shout_PHB2024_RuneAbility_Wis"
+target = "host"
+setup = [{ target = "host", remove_status = ["PHB2024_RUNE_ABILITY*"] }, { target = "host", status = "PHB2024_RUNE_ABILITY_PICK", turns = -1 }]
+expect = [{ target = "host", status_applied = ["PHB2024_RUNE_ABILITY_WIS"] }]
+
+[[case]]
+id = "bigby-rune-ability-cast"
+build = "bigby-fighter"
+title = "Rune Shaper: a rune spell still casts after the ability was chosen (the unlock passive re-evaluates on the choice)"
+spell = "Zone_PHB2024_Rune_BurningHands_Free"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", status = "PHB2024_RUNE_ABILITY_WIS", turns = -1 }, { target = "host", passive = "PHB2024_Rune_Unlock_BurningHands" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", damage_type = "Fire" }]
