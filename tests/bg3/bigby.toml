@@ -69,6 +69,17 @@ setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host",
 expect = [{ target = "A", damage_type = "Thunder" }, { target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
+id = "bigby-strike-cloud-spell"
+build = "bigby-fighter"
+title = "Cloud Strike's hidden spell on its own: the target's failed Wisdom save turns the caster invisible"
+spell = "Target_PHB2024_StrikeCloud_Invis"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
+
+[[case]]
 id = "bigby-strike-frost"
 build = "bigby-fighter"
 title = "Frost Strike: an extra 1d6 cold and the target can't move"
