@@ -38,10 +38,14 @@ Storm	Lightning infusion (electrical crackling)
 3. Enable in your mod manager
 4. Launch the game and create/modify a character
 
+## Requirements
+
+- Baldur's Gate 3
+- **DnD 5.5e All-in-One BEYOND** (load this mod after it)
+- **[BG3 Script Extender](https://github.com/Norbyte/bg3se)** v22 or newer - enforces the feat prerequisites the game itself can't check: each "of the ... Giant" feat needs the matching Strike of the Giants choice, and Rune Shaper needs the Spellcasting feature (or the Rune Carver background). Without Script Extender everything else works, but those feats stay open to everyone.
+
 ## Compatibility
 
-- Requires Baldur's Gate 3
-- Built on DnD 5.5e All-in-One BEYOND
 - Should work with most other mods
 
 ## File Structure
