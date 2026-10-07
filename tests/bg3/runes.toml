@@ -12,7 +12,7 @@ title = "Rune Shaper InflictWounds: free cast (rune charge)"
 spell = "Target_PHB2024_Rune_InflictWounds_Free"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
 setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }]
 
@@ -23,8 +23,8 @@ title = "Rune Shaper InflictWounds: cast with a level 1 slot"
 spell = "Target_PHB2024_Rune_InflictWounds_Slot"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -34,8 +34,8 @@ title = "Rune Shaper InflictWounds: cast with a level 2 slot"
 spell = "Target_PHB2024_Rune_InflictWounds_Slot_2"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }, { resource = "SpellSlot", level = 2, amount_change = -1 }]
 
 [[case]]
@@ -45,8 +45,8 @@ title = "Rune Shaper InflictWounds: cast with a level 3 slot"
 spell = "Target_PHB2024_Rune_InflictWounds_Slot_3"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }, { resource = "SpellSlot", level = 3, amount_change = -1 }]
 
 [[case]]
@@ -56,8 +56,8 @@ title = "Rune Shaper InflictWounds: cast with a level 4 slot"
 spell = "Target_PHB2024_Rune_InflictWounds_Slot_4"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }, { resource = "SpellSlot", level = 4, amount_change = -1 }]
 
 [[case]]
@@ -67,8 +67,8 @@ title = "Rune Shaper InflictWounds: cast with a level 5 slot"
 spell = "Target_PHB2024_Rune_InflictWounds_Slot_5"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }, { resource = "SpellSlot", level = 5, amount_change = -1 }]
 
 [[case]]
@@ -78,8 +78,8 @@ title = "Rune Shaper InflictWounds: cast with a level 6 slot"
 spell = "Target_PHB2024_Rune_InflictWounds_Slot_6"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.0 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Necrotic" }, { resource = "SpellSlot", level = 6, amount_change = -1 }]
 
 [[case]]
@@ -137,7 +137,7 @@ spell = "Zone_PHB2024_Rune_BurningHands_Slot"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -148,7 +148,7 @@ spell = "Zone_PHB2024_Rune_BurningHands_Slot_2"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }, { resource = "SpellSlot", level = 2, amount_change = -1 }]
 
 [[case]]
@@ -159,7 +159,7 @@ spell = "Zone_PHB2024_Rune_BurningHands_Slot_3"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }, { resource = "SpellSlot", level = 3, amount_change = -1 }]
 
 [[case]]
@@ -170,7 +170,7 @@ spell = "Zone_PHB2024_Rune_BurningHands_Slot_4"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }, { resource = "SpellSlot", level = 4, amount_change = -1 }]
 
 [[case]]
@@ -181,7 +181,7 @@ spell = "Zone_PHB2024_Rune_BurningHands_Slot_5"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }, { resource = "SpellSlot", level = 5, amount_change = -1 }]
 
 [[case]]
@@ -192,7 +192,7 @@ spell = "Zone_PHB2024_Rune_BurningHands_Slot_6"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }, { resource = "SpellSlot", level = 6, amount_change = -1 }]
 
 [[case]]
@@ -209,7 +209,7 @@ build = "bigby-fighter"
 title = "Rune Shaper SpeakWithAnimals: cast with a level 1 slot"
 spell = "Shout_PHB2024_Rune_SpeakWithAnimals_Slot"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied = ["PETPAL"] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -226,7 +226,7 @@ build = "bigby-fighter"
 title = "Rune Shaper ArmorOfAgathys: cast with a level 1 slot"
 spell = "Shout_PHB2024_Rune_ArmorOfAgathys_Slot"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied_any = ["ARMOR_OF_AGATHYS"] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -235,7 +235,7 @@ build = "bigby-fighter"
 title = "Rune Shaper ArmorOfAgathys: cast with a level 2 slot"
 spell = "Shout_PHB2024_Rune_ArmorOfAgathys_Slot_2"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied_any = ["ARMOR_OF_AGATHYS", "ARMOR_OF_AGATHYS_2"] }, { resource = "SpellSlot", level = 2, amount_change = -1 }]
 
 [[case]]
@@ -244,7 +244,7 @@ build = "bigby-fighter"
 title = "Rune Shaper ArmorOfAgathys: cast with a level 3 slot"
 spell = "Shout_PHB2024_Rune_ArmorOfAgathys_Slot_3"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied_any = ["ARMOR_OF_AGATHYS", "ARMOR_OF_AGATHYS_3"] }, { resource = "SpellSlot", level = 3, amount_change = -1 }]
 
 [[case]]
@@ -253,7 +253,7 @@ build = "bigby-fighter"
 title = "Rune Shaper ArmorOfAgathys: cast with a level 4 slot"
 spell = "Shout_PHB2024_Rune_ArmorOfAgathys_Slot_4"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied_any = ["ARMOR_OF_AGATHYS", "ARMOR_OF_AGATHYS_4"] }, { resource = "SpellSlot", level = 4, amount_change = -1 }]
 
 [[case]]
@@ -262,7 +262,7 @@ build = "bigby-fighter"
 title = "Rune Shaper ArmorOfAgathys: cast with a level 5 slot"
 spell = "Shout_PHB2024_Rune_ArmorOfAgathys_Slot_5"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied_any = ["ARMOR_OF_AGATHYS", "ARMOR_OF_AGATHYS_5"] }, { resource = "SpellSlot", level = 5, amount_change = -1 }]
 
 [[case]]
@@ -271,7 +271,7 @@ build = "bigby-fighter"
 title = "Rune Shaper ArmorOfAgathys: cast with a level 6 slot"
 spell = "Shout_PHB2024_Rune_ArmorOfAgathys_Slot_6"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied_any = ["ARMOR_OF_AGATHYS", "ARMOR_OF_AGATHYS_6"] }, { resource = "SpellSlot", level = 6, amount_change = -1 }]
 
 [[case]]
@@ -288,7 +288,7 @@ build = "bigby-fighter"
 title = "Rune Shaper Goodberry: cast with a level 1 slot"
 spell = "Target_PHB2024_Rune_Goodberry_Slot"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -305,7 +305,7 @@ build = "bigby-fighter"
 title = "Rune Shaper Longstrider: cast with a level 1 slot"
 spell = "Target_PHB2024_Rune_Longstrider_Slot"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied = ["LONGSTRIDER"] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -344,7 +344,7 @@ build = "bigby-fighter"
 title = "Rune Shaper Sanctuary: cast with a level 1 slot"
 spell = "Target_PHB2024_Rune_Sanctuary_Slot"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ target = "host", status_applied = ["SANCTUARY"] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -366,7 +366,7 @@ spell = "Zone_PHB2024_Rune_Thunderwave_Slot"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -377,7 +377,7 @@ spell = "Zone_PHB2024_Rune_Thunderwave_Slot_2"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,2)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { resource = "SpellSlot", level = 2, amount_change = -1 }]
 
 [[case]]
@@ -388,7 +388,7 @@ spell = "Zone_PHB2024_Rune_Thunderwave_Slot_3"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,3)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { resource = "SpellSlot", level = 3, amount_change = -1 }]
 
 [[case]]
@@ -399,7 +399,7 @@ spell = "Zone_PHB2024_Rune_Thunderwave_Slot_4"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { resource = "SpellSlot", level = 4, amount_change = -1 }]
 
 [[case]]
@@ -410,7 +410,7 @@ spell = "Zone_PHB2024_Rune_Thunderwave_Slot_5"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,5)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { resource = "SpellSlot", level = 5, amount_change = -1 }]
 
 [[case]]
@@ -421,7 +421,7 @@ spell = "Zone_PHB2024_Rune_Thunderwave_Slot_6"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,6)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { resource = "SpellSlot", level = 6, amount_change = -1 }]
 
 [[case]]
@@ -457,7 +457,7 @@ title = "Rune Shaper FogCloud: cast with a level 1 slot"
 spell = "Target_PHB2024_Rune_FogCloud_Slot"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }]
 expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]
 
 [[case]]
@@ -479,5 +479,5 @@ spell = "Target_PHB2024_Rune_Entangle_Slot"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "host", passive = "PHB2024_RuneSlotCost" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]

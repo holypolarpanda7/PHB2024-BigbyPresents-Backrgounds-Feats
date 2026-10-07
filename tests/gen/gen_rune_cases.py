@@ -21,7 +21,7 @@ RUNES = {
     "Entangle": ("A", 4, "Strength", []),
     "FogCloud": ("A", 4, None, []),
     "Goodberry": ("host", None, None, []),
-    "InflictWounds": ("A", 1.2, "Constitution", ['{ target = "A", damage_type = "Necrotic" }']),
+    "InflictWounds": ("A", 1.0, "Constitution", ['{ target = "A", damage_type = "Necrotic" }']),
     "Longstrider": ("host", None, None, ['{ target = "host", status_applied = ["LONGSTRIDER"] }']),
     "Sanctuary": ("host", None, None, ['{ target = "host", status_applied = ["SANCTUARY"] }']),
     "BurningHands": ("A", 2, "Dexterity", ['{ target = "A", damage_type = "Fire" }']),
@@ -55,8 +55,9 @@ def main():
         setup = []
         if kind != "Free":
             setup.append(f'{{ target = "host", boost = "ActionResource(SpellSlot,1,{lvl})" }}')
-            uses_functor = "UseActionResource(SELF,SpellSlot" in open_all().split(f'new entry "{name}"')[1].split("new entry")[0]
-            if uses_functor:
+            # slot variants spent by the OnCast passive PHB2024_RuneSlotCost (the rune's unlock status grants it in play)
+            if f"SpellId('{name}')" in open_all():
+                setup.append('{ target = "host", passive = "PHB2024_RuneSlotCost" }')
                 expect.append(f'{{ resource = "SpellSlot", level = {lvl}, amount_change = -1 }}')
         if save:
             setup.append(f'{{ target = "A", boost = "AbilityFailedSavingThrow({save})" }}')
