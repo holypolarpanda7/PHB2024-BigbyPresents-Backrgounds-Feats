@@ -41,13 +41,13 @@ Storm	Lightning infusion (electrical crackling)
 ## Compatibility
 
 - Requires Baldur's Gate 3
-- Compatible with PHB 2024 mods
+- Built on DnD 5.5e All-in-One BEYOND
 - Should work with most other mods
 
 ## File Structure
 
 ```
-PHB2024-BigbyPresents-Backrgounds-Feats/
+BigbyPresents-Backgrounds-Feats/
 ├── Mods/BigbyPresents_[UUID]/
 │   ├── meta.lsx
 │   └── Localization/English/english.xml

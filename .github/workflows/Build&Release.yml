@@ -10,10 +10,10 @@ permissions:
 
 env:
   # === Display name (human-readable) ===
-  MOD_NAME: "PHB 2024 - Bigby Presents: Backgrounds & Feats"
+  MOD_NAME: "Bigby Presents: Backgrounds & Feats"
 
   # === Safe slug for filenames ===
-  MOD_SLUG: "PHB2024_BigbyPresents_Backgrounds_Feats"
+  MOD_SLUG: "BigbyPresents_Backgrounds_Feats"
 
   GAME: "bg3"
 
