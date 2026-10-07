@@ -4,7 +4,7 @@
 name = "Bigby Presents - Glory of the Giants Feats and Backgrounds"
 version = "1.2.0"
 author = "holypolarpanda"
-summary = "Bigby Presents: Glory of the Giants - backgrounds and feats for Baldur's Gate 3. Giant Foundling and Rune Carver backgrounds, Strike of the Giants, Rune Shaper and the six Giant feats, rules-accurate. Works standalone; with DnD 5.5e All-in-One BEYOND it replaces its Giant feats (load after it). Script Extender enforces the feat prerequisites."
+summary = "Bigby Presents: Glory of the Giants - backgrounds and feats for Baldur's Gate 3. Giant Foundling and Rune Carver backgrounds, Strike of the Giants, Rune Shaper and the six Giant feats. Works standalone; with DnD 5.5e All-in-One BEYOND it replaces its Giant feats (load after it). Script Extender enforces the feat prerequisites."
 
 [requirements]
 method = "legacy"

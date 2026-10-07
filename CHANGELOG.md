@@ -14,6 +14,6 @@
 - Fixed: Searing Ignition's save was inverted (a failed save took half damage and no Blinded).
 - Fixed: Frigid Retaliation's speed 0 and Stone Throw's prone never applied.
 - Fixed: area rune spells (Burning Hands, Thunderwave, Fog Cloud, Entangle) could spend several spell slots in one cast.
-- Strikes follow the book: saving throws (DC 8 + proficiency + Str or Con), Storm Strike gives disadvantage on attack rolls.
+- Strike riders now use saving throws (DC 8 + proficiency bonus + Strength or Constitution modifier); Storm Strike gives disadvantage on attack rolls.
 - Feat descriptions state their prerequisites.
 - Every feature is now covered by an automated in-game test suite (65 cases).
