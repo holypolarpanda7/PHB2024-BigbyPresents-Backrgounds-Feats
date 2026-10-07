@@ -1,0 +1,229 @@
+# Bigby Presents: Backgrounds & Feats - in-game tests (bg3-data-mcp harness, 2026-10-07).
+# Run one case: bg3_test_run("bigby", "<id>"); the whole suite runs inside the build below through the gate:
+#   python -m bg3data.gate run bigby
+# Features are granted to the host for each case (setup passives), so the cases test the mod's own spells, interrupts
+# and statuses; only the case's own reaction stays on (`reactions`). Rules: Bigby Presents: Glory of the Giants (2023).
+
+[suite]
+name = "Bigby Presents"
+mode = "script"
+
+# ---------------------------------------------------------------- build (hosts the cases)
+[[build]]
+id = "fighter-base"
+class = "Fighter"
+title = "Fighter base, level 1 (start save)"
+levels = [1, 1]
+save_as = "Fighter L1 Base"
+
+[[build]]
+id = "bigby-fighter"
+class = "Fighter"
+title = "Fighter 2-4 with the mod loaded (hosts every Bigby case at level 4)"
+from = "fighter-base"
+levels = [2, 4]
+
+# ---------------------------------------------------------------- Strike of the Giants
+[[case]]
+id = "bigby-strike-select"
+build = "bigby-fighter"
+title = "Strike of the Giants: the picker spell opens the strike choice"
+spell = "Shout_PHB2024_Strike_Select"
+target = "host"
+setup = [{ target = "host", passive = "PHB2024_StrikeOfGiants_Feature" }]
+expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_PICK"] }]
+
+[[case]]
+id = "bigby-strike-pick-fire"
+build = "bigby-fighter"
+title = "Strike of the Giants: picking Fire Strike grants it for good"
+spell = "Shout_SoG_Strike_Fire_Option"
+target = "host"
+setup = [{ target = "host", status = "PHB2024_STRIKE_PICK", turns = -1 }]
+expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_UNLOCK_FIRE"] }]
+
+[[case]]
+id = "bigby-strike-fire"
+build = "bigby-fighter"
+title = "Fire Strike: a weapon hit deals an extra 1d10 fire and spends a use"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_Strike_Fire"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Fire" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", damage_type = "Fire" }, { resource = "StrikeOfGiants_Charge", level = 0, amount_change = -1 }]
+
+[[case]]
+id = "bigby-strike-cloud"
+build = "bigby-fighter"
+title = "Cloud Strike: an extra 1d4 thunder and the target is hindered"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_Strike_Cloud"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", damage_type = "Thunder" }, { target = "A", status_applied = ["PHB2024_STRIKE_CLOUD_EFFECT"] }]
+
+[[case]]
+id = "bigby-strike-frost"
+build = "bigby-fighter"
+title = "Frost Strike: an extra 1d6 cold and the target can't move"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_Strike_Frost"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Frost" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", damage_type = "Cold" }, { target = "A", status_applied = ["PHB2024_STRIKE_FROST_EFFECT"] }]
+
+[[case]]
+id = "bigby-strike-hill"
+build = "bigby-fighter"
+title = "Hill Strike: an extra 1d6 and the target falls prone"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_Strike_Hill"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Hill" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["PRONE"] }, { resource = "StrikeOfGiants_Charge", level = 0, amount_change = -1 }]
+
+[[case]]
+id = "bigby-strike-stone"
+build = "bigby-fighter"
+title = "Stone Strike: an extra 1d6 force"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_Strike_Stone"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Stone" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", damage_type = "Force" }, { resource = "StrikeOfGiants_Charge", level = 0, amount_change = -1 }]
+
+[[case]]
+id = "bigby-strike-storm"
+build = "bigby-fighter"
+title = "Storm Strike: an extra 1d6 lightning and the target is weakened"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_Strike_Storm"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Storm" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", damage_type = "Lightning" }, { target = "A", status_applied = ["PHB2024_STRIKE_STORM_WEAKEN"] }]
+
+# ---------------------------------------------------------------- Rune Shaper
+[[case]]
+id = "bigby-runeshaper-inscribe"
+build = "bigby-fighter"
+title = "Rune Shaper: Inscribe Runes opens the rune choice and grants Comprehend Languages"
+spell = "Shout_PHB2024_RuneShaper"
+target = "host"
+setup = [{ target = "host", passive = "PHB2024_RuneShaper_Feature" }]
+expect = [{ target = "host", status_applied = ["PHB2024_RUNESHAPER", "PHB2024_COMPREHEND_LANGUAGES"] }]
+
+[[case]]
+id = "bigby-rune-pick-fire"
+build = "bigby-fighter"
+title = "Rune Shaper: picking the Fire rune learns Burning Hands"
+spell = "Shout_PHB2024_Rune_Fire"
+target = "host"
+setup = [{ target = "host", status = "PHB2024_RUNESHAPER", turns = -1 }]
+expect = [{ target = "host", status_applied = ["PHB2024_RUNE_UNLOCK_FIRE"] }]
+
+[[case]]
+id = "bigby-rune-burning-hands"
+build = "bigby-fighter"
+title = "Fire rune: Burning Hands without a slot, once per long rest"
+spell = "Zone_PHB2024_Rune_BurningHands_Free"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", passive = "PHB2024_Rune_Unlock_BurningHands" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", damage_type = "Fire" }]
+
+# ---------------------------------------------------------------- the six Giant feats
+[[case]]
+id = "bigby-searing-ignition"
+build = "bigby-fighter"
+title = "Ember of the Fire Giant: Searing Ignition burns and blinds on a failed Dexterity save"
+spell = "Shout_PHB2024_SearingIgnition"
+target = "host"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "PHB2024_EmberFireGiant_Feature" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", damage_type = "Fire" }, { target = "A", status_applied = ["BLINDED"] }]
+
+[[case]]
+id = "bigby-frigid-retaliation"
+build = "bigby-fighter"
+title = "Fury of the Frost Giant: hit -> reaction, cold damage and speed 0 on a failed Constitution save"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_FrigidRetaliation"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", max_hp = 200 }, { target = "host", passive = "PHB2024_FuryFrostGiant_Feature" }, { target = "A", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", damage_type = "Cold" }, { target = "A", status_applied = ["PHB2024_FRIGID_RETALIATION_FROZEN"] }, { resource = "FrigidRetaliation_Charge", level = 0, amount_change = -1 }]
+
+[[case]]
+id = "bigby-cloudy-escape"
+build = "bigby-fighter"
+title = "Guile of the Cloud Giant: hit -> reaction, gaseous resistance and a free teleport"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+retries = 2
+reactions = ["Interrupt_PHB2024_CloudyEscape"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", max_hp = 200 }, { target = "host", passive = "PHB2024_GuileCloudGiant_Feature" }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "host", status_applied = ["PHB2024_CLOUDY_ESCAPE"] }, { resource = "CloudyEscape_Charge", level = 0, amount_change = -1 }]
+
+[[case]]
+id = "bigby-stone-throw"
+build = "bigby-fighter"
+title = "Keenness of the Stone Giant: Stone Throw deals 1d10 force"
+spell = "Projectile_PHB2024_StoneThrow"
+target = "A"
+real_rolls = true
+retries = 2
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", passive = "PHB2024_KeennessStoneGiant_Feature" }, { target = "host", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "A", damage_type = "Force" }]
+
+[[case]]
+id = "bigby-maelstrom-aura"
+build = "bigby-fighter"
+title = "Soul of the Storm Giant: Maelstrom Aura (resistances, attackers have disadvantage)"
+spell = "Shout_PHB2024_MaelstromAura"
+target = "host"
+setup = [{ target = "host", passive = "PHB2024_SoulStormGiant_Feature" }]
+expect = [{ target = "host", status_applied = ["PHB2024_MAELSTROM_AURA"] }]
+
+[[case]]
+id = "bigby-bulwark"
+build = "bigby-fighter"
+title = "Vigor of the Hill Giant: Bulwark keeps you standing against a wolf's trip"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+repeat = 2
+repeat_wait = 3
+clear_between = ["PRONE"]
+reactions = ["Interrupt_PHB2024_Bulwark"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", max_hp = 300 }, { target = "host", passive = "PHB2024_VigorHillGiant_Feature" }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "host", status_applied_count = { status = "PRONE", count = [0, 0] } }]
+notes = "Bulwark rerolls a failed Strength save with a minimum of 19; with 2+ uses at level 4 both bites should leave the host standing."
