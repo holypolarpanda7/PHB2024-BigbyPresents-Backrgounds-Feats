@@ -1,0 +1,12 @@
+-- Save DCs from Bigby Presents: Glory of the Giants (2026-10-07). Same form as the base game's ManeuverSaveDC.
+
+-- Strike of the Giants: 8 + proficiency bonus + Strength or Constitution modifier (the better one)
+function GiantStrikeDC()
+    return 8 + context.Source.ProficiencyBonus + math.max(GetModifier(context.Source.Strength), GetModifier(context.Source.Constitution))
+end
+
+-- The "of the ... Giant" feats: 8 + proficiency bonus + the modifier of the ability the feat increased. The feat's choice
+-- isn't recorded, so the best of its options counts (Strength, Constitution or Wisdom for Fire, Frost, Stone and Hill).
+function GiantFeatDC()
+    return 8 + context.Source.ProficiencyBonus + math.max(GetModifier(context.Source.Strength), GetModifier(context.Source.Constitution), GetModifier(context.Source.Wisdom))
+end

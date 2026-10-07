@@ -29,12 +29,16 @@ RUNES = {
 }
 
 
+# surfaces outlast a case (fog blinds, vines entangle) and spoiled the cases after them in one session: these run last
+LAST = ("FogCloud", "Entangle")
+
+
 def entries():
     names = []
     for f in sorted(os.listdir(DATA)):
         if f.endswith(".txt"):
             names += re.findall(r'^new entry "([^"]+)"', open(os.path.join(DATA, f), encoding="utf-8").read(), re.M)
-    return names
+    return sorted(names, key=lambda n: any(k in n for k in LAST))
 
 
 def main():

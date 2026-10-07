@@ -226,7 +226,7 @@ data "DisplayName" "hca12da34eb56fc78ad90bc12de34fa34"
 data "Description" "hca12da34eb56fc78ad90bc12de34fa35"
 data "Icon" "Spell_Evocation_LightningBolt"
 data "StackId" "PHB2024_STRIKE_STORM_WEAKEN"
-data "Boosts" "Disadvantage(SavingThrow)"
+data "Boosts" "Disadvantage(AttackRoll)"
 data "TickType" "StartTurn"
 data "StatusGroups" "SG_Condition"
 

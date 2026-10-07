@@ -6,25 +6,6 @@ name = "Rune Shaper spells"
 mode = "script"
 
 [[case]]
-id = "rune-Target_PHB2024_Rune_FogCloud_Free"
-build = "bigby-fighter"
-title = "Rune Shaper FogCloud: free cast (rune charge)"
-spell = "Target_PHB2024_Rune_FogCloud_Free"
-target = "A"
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
-expect = [{ cast = true }]
-
-[[case]]
-id = "rune-Target_PHB2024_Rune_FogCloud_Slot"
-build = "bigby-fighter"
-title = "Rune Shaper FogCloud: cast with a level 1 slot"
-spell = "Target_PHB2024_Rune_FogCloud_Slot"
-target = "A"
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
-expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]
-
-[[case]]
 id = "rune-Target_PHB2024_Rune_InflictWounds_Free"
 build = "bigby-fighter"
 title = "Rune Shaper InflictWounds: free cast (rune charge)"
@@ -350,28 +331,6 @@ setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target 
 expect = [{ target = "A", status_applied = ["COMMAND_HALT"] }]
 
 [[case]]
-id = "rune-Target_PHB2024_Rune_Entangle_Free"
-build = "bigby-fighter"
-title = "Rune Shaper Entangle: free cast (rune charge)"
-spell = "Target_PHB2024_Rune_Entangle_Free"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
-setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
-expect = [{ cast = true }]
-
-[[case]]
-id = "rune-Target_PHB2024_Rune_Entangle_Slot"
-build = "bigby-fighter"
-title = "Rune Shaper Entangle: cast with a level 1 slot"
-spell = "Target_PHB2024_Rune_Entangle_Slot"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
-setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
-expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]
-
-[[case]]
 id = "rune-Target_PHB2024_Rune_Sanctuary_Free"
 build = "bigby-fighter"
 title = "Rune Shaper Sanctuary: free cast (rune charge)"
@@ -481,3 +440,44 @@ spell = "Shout_PHB2024_ComprehendLanguages_Slot"
 target = "host"
 setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
 expect = [{ target = "host", status_applied = ["COMPREHEND_LANGUAGES"] }]
+
+[[case]]
+id = "rune-Target_PHB2024_Rune_FogCloud_Free"
+build = "bigby-fighter"
+title = "Rune Shaper FogCloud: free cast (rune charge)"
+spell = "Target_PHB2024_Rune_FogCloud_Free"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+expect = [{ cast = true }]
+
+[[case]]
+id = "rune-Target_PHB2024_Rune_FogCloud_Slot"
+build = "bigby-fighter"
+title = "Rune Shaper FogCloud: cast with a level 1 slot"
+spell = "Target_PHB2024_Rune_FogCloud_Slot"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }]
+expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]
+
+[[case]]
+id = "rune-Target_PHB2024_Rune_Entangle_Free"
+build = "bigby-fighter"
+title = "Rune Shaper Entangle: free cast (rune charge)"
+spell = "Target_PHB2024_Rune_Entangle_Free"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
+expect = [{ cast = true }]
+
+[[case]]
+id = "rune-Target_PHB2024_Rune_Entangle_Slot"
+build = "bigby-fighter"
+title = "Rune Shaper Entangle: cast with a level 1 slot"
+spell = "Target_PHB2024_Rune_Entangle_Slot"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "host", boost = "ActionResource(SpellSlot,1,1)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
+expect = [{ resource = "SpellSlot", level = 1, amount_change = -1 }]

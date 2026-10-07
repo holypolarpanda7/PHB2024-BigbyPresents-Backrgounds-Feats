@@ -65,7 +65,7 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Cloud"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { target = "A", status_applied = ["PHB2024_STRIKE_CLOUD_EFFECT"] }]
 
 [[case]]
@@ -78,7 +78,7 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Frost"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Frost" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Frost" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Cold" }, { target = "A", status_applied = ["PHB2024_STRIKE_FROST_EFFECT"] }]
 
 [[case]]
@@ -91,7 +91,7 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Hill"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Hill" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Hill" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ target = "A", status_applied = ["PRONE"] }, { resource = "StrikeOfGiants_Charge", level = 0, amount_change = -1 }]
 
 [[case]]
@@ -104,7 +104,7 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Stone"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Stone" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Stone" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ target = "A", damage_type = "Force" }, { resource = "StrikeOfGiants_Charge", level = 0, amount_change = -1 }]
 
 [[case]]
@@ -117,7 +117,7 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Storm"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Storm" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Storm" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
 expect = [{ target = "A", damage_type = "Lightning" }, { target = "A", status_applied = ["PHB2024_STRIKE_STORM_WEAKEN"] }]
 
 # ---------------------------------------------------------------- Rune Shaper
@@ -193,14 +193,14 @@ expect = [{ target = "host", status_applied = ["PHB2024_CLOUDY_ESCAPE"] }, { res
 [[case]]
 id = "bigby-stone-throw"
 build = "bigby-fighter"
-title = "Keenness of the Stone Giant: Stone Throw deals 1d10 force"
+title = "Keenness of the Stone Giant: Stone Throw deals 1d10 force and knocks prone on a failed Strength save"
 spell = "Projectile_PHB2024_StoneThrow"
 target = "A"
 real_rolls = true
 retries = 2
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
-setup = [{ target = "host", passive = "PHB2024_KeennessStoneGiant_Feature" }, { target = "host", boost = "RollBonus(Attack,30)" }]
-expect = [{ target = "A", damage_type = "Force" }]
+setup = [{ target = "host", passive = "PHB2024_KeennessStoneGiant_Feature" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
+expect = [{ target = "A", damage_type = "Force" }, { target = "A", status_applied = ["PRONE"] }]
 
 [[case]]
 id = "bigby-maelstrom-aura"
