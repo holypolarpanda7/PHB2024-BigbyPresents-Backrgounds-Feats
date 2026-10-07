@@ -1,0 +1,15 @@
+# Nexus Mods page for this mod - applied by `python -m bg3data.nexus_web push <layer>` (dry run without --apply).
+# Pulled from the live page 2026-10-07 13:34. The full description is description.bbcode (BBCode).
+
+name = "Bigby Presents - Glory of the Giants Feats and Backgrounds"
+version = "v1.1.0"
+author = "holypolarpanda"
+summary = "Bigby Presents: Glory of the Giants - backgrounds and feats for Baldur's Gate 3. Giant Foundling and Rune Carver backgrounds, Strike of the Giants, Rune Shaper and the six Giant feats, rules-accurate. Works standalone; with DnD 5.5e All-in-One BEYOND it replaces its Giant feats (load after it). Script Extender enforces the feat prerequisites."
+
+[requirements]
+method = "legacy"
+
+[[requirements.external]]
+name = "BG3 Script Extender"
+url = "https://github.com/Norbyte/bg3se/releases"
+note = "v22 or newer - enforces the Giant feat prerequisites"
