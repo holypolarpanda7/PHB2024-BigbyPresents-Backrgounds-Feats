@@ -9,55 +9,55 @@
                     <attribute id="Name" type="FixedString" value="StrikeOfTheGiants"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_StrikeOfGiants_Feature"/>
                     <attribute id="Requirements" type="LSString" value="FeatRequirementProficiency(&apos;MartialWeapons&apos;)"/>
-                    <attribute id="UUID" type="guid" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b25"/>
+                    <attribute id="UUID" type="guid" value="4ac068c8-1b5d-45d2-8574-0e0eb96f8084"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
-                    <attribute id="Name" type="FixedString" value="RuneCarver"/>
+                    <attribute id="Name" type="FixedString" value="RuneShaper"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_RuneShaper_Feature;PHB2024_RuneShaper_ComprehendLanguages"/>
-                    <attribute id="UUID" type="guid" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ab"/>
+                    <attribute id="UUID" type="guid" value="b44a9372-d1b0-4517-a9d0-e3a0df5d906c"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
                     <attribute id="Name" type="FixedString" value="EmberOfTheFireGiant"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_EmberFireGiant_Feature"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(507a530f-041c-486d-9657-8d8dc44c65eb,1,1,STR_CON_WIS)"/>
-                    <attribute id="UUID" type="guid" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(e7036ef8-c508-5469-9ac9-1e16caabd143,1,1,STR_CON_WIS)"/>
+                    <attribute id="UUID" type="guid" value="31440e19-dba2-4e14-987a-155cb8586f72"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
                     <attribute id="Name" type="FixedString" value="FuryOfTheFrostGiant"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_FuryFrostGiant_Feature"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(507a530f-041c-486d-9657-8d8dc44c65eb,1,1,STR_CON_WIS)"/>
-                    <attribute id="UUID" type="guid" value="b2c3d4e5-f6a7-8901-bcde-f23456789012"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(e7036ef8-c508-5469-9ac9-1e16caabd143,1,1,STR_CON_WIS)"/>
+                    <attribute id="UUID" type="guid" value="dcc55862-f225-4e27-be68-e2fcb3b213b9"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
                     <attribute id="Name" type="FixedString" value="GuileOfTheCloudGiant"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_GuileCloudGiant_Feature"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(6f722be8-f281-4eee-8948-a56f04d4943d,1,1,STR_CON_CHA)"/>
-                    <attribute id="UUID" type="guid" value="c3d4e5f6-a7b8-9012-cdef-345678901234"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(caa7a1e2-0f4f-5d20-b20d-79f9713bac6e,1,1,STR_CON_CHA)"/>
+                    <attribute id="UUID" type="guid" value="51fb1e35-a057-4640-9089-6fde7ca7164f"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
                     <attribute id="Name" type="FixedString" value="KeennessOfTheStoneGiant"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_KeennessStoneGiant_Feature"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(507a530f-041c-486d-9657-8d8dc44c65eb,1,1,STR_CON_WIS)"/>
-                    <attribute id="UUID" type="guid" value="d4e5f6a7-b8c9-0123-defa-456789012345"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(e7036ef8-c508-5469-9ac9-1e16caabd143,1,1,STR_CON_WIS)"/>
+                    <attribute id="UUID" type="guid" value="338a536f-ca45-451c-8b64-a2198c91acd7"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
                     <attribute id="Name" type="FixedString" value="SoulOfTheStormGiant"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_SoulStormGiant_Feature"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(625c82c2-9b61-4a92-870e-f399190f910e,1,1,STR_WIS_CHA)"/>
-                    <attribute id="UUID" type="guid" value="e5f6a7b8-c9d0-1234-efab-567890123456"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(796ae465-1496-5d52-8aa0-b28e0bfa76a7,1,1,STR_WIS_CHA)"/>
+                    <attribute id="UUID" type="guid" value="27b841d6-f006-46a6-bcee-3f1dca5f3fdc"/>
                 </node>
                 <node id="Feat">
                     <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
                     <attribute id="Name" type="FixedString" value="VigorOfTheHillGiant"/>
                     <attribute id="PassivesAdded" type="LSString" value="PHB2024_VigorHillGiant_Feature;PHB2024_IronStomach"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(507a530f-041c-486d-9657-8d8dc44c65eb,1,1,STR_CON_WIS)"/>
-                    <attribute id="UUID" type="guid" value="f6a7b8c9-d0e1-2345-fabc-678901234567"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(e7036ef8-c508-5469-9ac9-1e16caabd143,1,1,STR_CON_WIS)"/>
+                    <attribute id="UUID" type="guid" value="8aa629b8-8b57-400d-ac51-be612be75a49"/>
                 </node>
             </children>
         </node>

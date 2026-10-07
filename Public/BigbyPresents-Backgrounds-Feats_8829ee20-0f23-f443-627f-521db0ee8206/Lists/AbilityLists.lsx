@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="0"/>
+    <region id="AbilityLists">
+        <node id="root">
+            <children>
+                <node id="AbilityList">
+                    <attribute id="Abilities" type="LSString" value="Strength, Constitution, Wisdom"/>
+                    <attribute id="Name" type="FixedString" value="Bigby STR_CON_WIS"/>
+                    <attribute id="UUID" type="guid" value="e7036ef8-c508-5469-9ac9-1e16caabd143"/>
+                </node>
+                <node id="AbilityList">
+                    <attribute id="Abilities" type="LSString" value="Strength, Constitution, Charisma"/>
+                    <attribute id="Name" type="FixedString" value="Bigby STR_CON_CHA"/>
+                    <attribute id="UUID" type="guid" value="caa7a1e2-0f4f-5d20-b20d-79f9713bac6e"/>
+                </node>
+                <node id="AbilityList">
+                    <attribute id="Abilities" type="LSString" value="Strength, Wisdom, Charisma"/>
+                    <attribute id="Name" type="FixedString" value="Bigby STR_WIS_CHA"/>
+                    <attribute id="UUID" type="guid" value="796ae465-1496-5d52-8aa0-b28e0bfa76a7"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

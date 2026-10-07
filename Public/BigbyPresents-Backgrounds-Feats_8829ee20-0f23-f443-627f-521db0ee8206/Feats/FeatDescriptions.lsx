@@ -5,60 +5,60 @@
         <node id="root">
             <children>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa01" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb00" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa00" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="StrikeOfTheGiants"/>
-                    <attribute id="FeatId" type="guid" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b25"/>
-                    <attribute id="UUID" type="guid" value="6b8c4a7a-90c1-4dfd-9d94-0e915d760b26"/>
+                    <attribute id="FeatId" type="guid" value="4ac068c8-1b5d-45d2-8574-0e0eb96f8084"/>
+                    <attribute id="UUID" type="guid" value="864e5186-1fc3-40f5-b2ca-0d14bc088257"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa21" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb01" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa20" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="RuneCarver"/>
-                    <attribute id="FeatId" type="guid" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ab"/>
-                    <attribute id="UUID" type="guid" value="2e9e9ef2-5b71-4c11-90b3-9c22d0d3c6ac"/>
+                    <attribute id="FeatId" type="guid" value="b44a9372-d1b0-4517-a9d0-e3a0df5d906c"/>
+                    <attribute id="UUID" type="guid" value="852ca1d9-be49-4f3e-9ba9-271ce264deaa"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa41" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb02" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa40" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="EmberOfTheFireGiant"/>
-                    <attribute id="FeatId" type="guid" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
-                    <attribute id="UUID" type="guid" value="a1b2c3d4-e5f6-7890-abcd-ef1234567891"/>
+                    <attribute id="FeatId" type="guid" value="31440e19-dba2-4e14-987a-155cb8586f72"/>
+                    <attribute id="UUID" type="guid" value="5b795d33-2ffa-4030-a3f8-c6f218b00f23"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa51" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb03" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa50" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="FuryOfTheFrostGiant"/>
-                    <attribute id="FeatId" type="guid" value="b2c3d4e5-f6a7-8901-bcde-f23456789012"/>
-                    <attribute id="UUID" type="guid" value="b2c3d4e5-f6a7-8901-bcde-f23456789013"/>
+                    <attribute id="FeatId" type="guid" value="dcc55862-f225-4e27-be68-e2fcb3b213b9"/>
+                    <attribute id="UUID" type="guid" value="6f1b7aee-b0da-4b5e-b45a-14828b47dd2d"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa61" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb04" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa60" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="GuileOfTheCloudGiant"/>
-                    <attribute id="FeatId" type="guid" value="c3d4e5f6-a7b8-9012-cdef-345678901234"/>
-                    <attribute id="UUID" type="guid" value="c3d4e5f6-a7b8-9012-cdef-345678901235"/>
+                    <attribute id="FeatId" type="guid" value="51fb1e35-a057-4640-9089-6fde7ca7164f"/>
+                    <attribute id="UUID" type="guid" value="ce3b56df-cea7-488e-a30d-1891676f36a9"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa71" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb05" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa70" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="KeennessOfTheStoneGiant"/>
-                    <attribute id="FeatId" type="guid" value="d4e5f6a7-b8c9-0123-defa-456789012345"/>
-                    <attribute id="UUID" type="guid" value="d4e5f6a7-b8c9-0123-defa-456789012346"/>
+                    <attribute id="FeatId" type="guid" value="338a536f-ca45-451c-8b64-a2198c91acd7"/>
+                    <attribute id="UUID" type="guid" value="82699933-9b69-4eda-ad90-96248e3d06b2"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa81" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb06" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa80" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="SoulOfTheStormGiant"/>
-                    <attribute id="FeatId" type="guid" value="e5f6a7b8-c9d0-1234-efab-567890123456"/>
-                    <attribute id="UUID" type="guid" value="e5f6a7b8-c9d0-1234-efab-567890123457"/>
+                    <attribute id="FeatId" type="guid" value="27b841d6-f006-46a6-bcee-3f1dca5f3fdc"/>
+                    <attribute id="UUID" type="guid" value="e661db19-217e-4303-80ef-4ebae210329b"/>
                 </node>
                 <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa91" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fb07" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="hca12da34eb56fc78ad90bc12de34fa90" version="1"/>
                     <attribute id="ExactMatch" type="FixedString" value="VigorOfTheHillGiant"/>
-                    <attribute id="FeatId" type="guid" value="f6a7b8c9-d0e1-2345-fabc-678901234567"/>
-                    <attribute id="UUID" type="guid" value="f6a7b8c9-d0e1-2345-fabc-678901234568"/>
+                    <attribute id="FeatId" type="guid" value="8aa629b8-8b57-400d-ac51-be612be75a49"/>
+                    <attribute id="UUID" type="guid" value="7afb0056-17d3-4906-9225-fd828a191012"/>
                 </node>
             </children>
         </node>

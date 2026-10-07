@@ -41,7 +41,7 @@ Storm	Lightning infusion (electrical crackling)
 ## Requirements
 
 - Baldur's Gate 3
-- **DnD 5.5e All-in-One BEYOND** (load this mod after it)
+- **DnD 5.5e All-in-One BEYOND** is optional. This mod works on its own; with DnD 5.5e loaded, its Giant feats replace DnD 5.5e's versions of the same feats (Strike of the Giants, Rune Shaper and the six "of the ... Giant" feats) - load this mod **after** DnD 5.5e for that.
 - **[BG3 Script Extender](https://github.com/Norbyte/bg3se)** v22 or newer - enforces the feat prerequisites the game itself can't check: each "of the ... Giant" feat needs the matching Strike of the Giants choice, and Rune Shaper needs the Spellcasting feature (or the Rune Carver background). Without Script Extender everything else works, but those feats stay open to everyone.
 
 ## Compatibility
