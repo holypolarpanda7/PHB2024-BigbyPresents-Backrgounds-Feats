@@ -57,6 +57,13 @@ local function strikeStatus(status)
 end
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", function(obj, status) if strikeStatus(status) then B.Sync() end end)
 Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", function(obj, status) if strikeStatus(status) then B.Sync() end end)
+-- Cloud Strike: the interrupt marks the target only when ITS Wisdom save fails; the attacker (the status's causee) turns invisible
+Ext.Osiris.RegisterListener("StatusApplied", 4, "after", function(obj, status, causee)
+    if status == "PHB2024_STRIKE_CLOUD_MARK" and causee and causee ~= "" then
+        Osi.RemoveStatus(obj, status)
+        Osi.ApplyStatus(causee, "PHB2024_STRIKE_CLOUD_INVISIBLE", 6, 1, causee)
+    end
+end)
 Ext.Osiris.RegisterListener("LeveledUp", 1, "after", function() B.Sync() end)
 Ext.Osiris.RegisterListener("CharacterJoinedParty", 1, "after", function() B.Sync() end)
 Ext.Events.SessionLoaded:Subscribe(function() B.Sync() end)

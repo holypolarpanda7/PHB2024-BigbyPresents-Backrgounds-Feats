@@ -65,19 +65,8 @@ real_rolls = true
 retries = 2
 reactions = ["Interrupt_PHB2024_Strike_Cloud"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_Invis)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Charges" }, { target = "host", passive = "PHB2024_StrikeOfGiants_Cloud" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "A", damage_type = "Thunder" }, { target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
-
-[[case]]
-id = "bigby-strike-cloud-spell"
-build = "bigby-fighter"
-title = "Cloud Strike's hidden spell on its own: the target's failed Wisdom save turns the caster invisible"
-spell = "Target_PHB2024_StrikeCloud_Invis"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_Invis)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
-expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
 
 [[case]]
 id = "bigby-strike-frost"
@@ -268,48 +257,4 @@ real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
 setup = [{ target = "host", status = "PHB2024_RUNE_ABILITY_WIS", turns = -1 }, { target = "host", passive = "PHB2024_Rune_Unlock_BurningHands" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }]
-
-[[case]]
-id = "tmp-cloud-A"
-build = "bigby-fighter"
-title = "TEMP Cloud hidden spell variant A"
-spell = "Target_PHB2024_StrikeCloud_TestA"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestA)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
-expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
-
-[[case]]
-id = "tmp-cloud-B"
-build = "bigby-fighter"
-title = "TEMP Cloud hidden spell variant B"
-spell = "Target_PHB2024_StrikeCloud_TestB"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestB)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
-expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
-
-[[case]]
-id = "tmp-cloud-C"
-build = "bigby-fighter"
-title = "TEMP Cloud hidden spell variant C"
-spell = "Target_PHB2024_StrikeCloud_TestC"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestC)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
-expect = [{ target = "host", status_applied = ["PHB2024_STRIKE_CLOUD_INVISIBLE"] }]
-
-[[case]]
-id = "tmp-cloud-D"
-build = "bigby-fighter"
-title = "TEMP Cloud hidden spell variant D"
-spell = "Target_PHB2024_StrikeCloud_TestD"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
-setup = [{ target = "host", boost = "UnlockSpell(Target_PHB2024_StrikeCloud_TestD)" }, { target = "host", boost = "RollBonus(SavingThrow,30,Wisdom)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
-expect = [{ target = "host", status_applied = ["BLESSED"] }]
 

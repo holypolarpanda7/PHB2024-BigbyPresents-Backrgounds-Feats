@@ -197,6 +197,13 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "StatusGroups" "SG_RemoveOnRespec"
 data "Passives" "PHB2024_Rune_Unlock_Thunderwave;PHB2024_RuneSlotCost"
 
+new entry "PHB2024_STRIKE_CLOUD_MARK"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "PHB2024_STRIKE_CLOUD_MARK"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "TickType" "StartTurn"
+
 new entry "PHB2024_STRIKE_CLOUD_INVISIBLE"
 type "StatusData"
 using "INVISIBLE"
