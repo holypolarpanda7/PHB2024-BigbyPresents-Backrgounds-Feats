@@ -21,7 +21,7 @@ RUNES = {
     "Entangle": ("A", 4, "Strength", []),
     "FogCloud": ("A", 4, None, []),
     "Goodberry": ("host", None, None, []),
-    "InflictWounds": ("A", 1.0, "Constitution", ['{ target = "A", damage_type = "Necrotic" }']),
+    "InflictWounds": ("A", 1.2, "Constitution", ['{ target = "A", damage_type = "Necrotic" }']),
     "Longstrider": ("host", None, None, ['{ target = "host", status_applied = ["LONGSTRIDER"] }']),
     "Sanctuary": ("host", None, None, ['{ target = "host", status_applied = ["SANCTUARY"] }']),
     "BurningHands": ("A", 2, "Dexterity", ['{ target = "A", damage_type = "Fire" }']),
@@ -61,6 +61,12 @@ def main():
                 expect.append(f'{{ resource = "SpellSlot", level = {lvl}, amount_change = -1 }}')
         if save:
             setup.append(f'{{ target = "A", boost = "AbilityFailedSavingThrow({save})" }}')
+        if dist:   # the wolf's opportunity attack broke the touch-range casts (Inflict Wounds, 2026-10-07)
+            setup.append('{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }')
+        # a status the previous case left on the host (Sanctuary) blocks the next cast of the same spell
+        for st in re.findall(r'status_applied(?:_any)? = \[([^\]]*)\]', " ".join(e for e in expect if 'target = "host"' in e)):
+            names = [x.strip().strip('"') for x in st.split(",") if x.strip()]
+            setup.insert(0, '{ target = "host", remove_status = [' + ", ".join(f'"{n}*"' for n in names) + '] }')  # prefix: SANCTUARY also leaves SANCTUARY_BLOCK
         expect = expect or ["{ cast = true }"]
         title = f"Rune Shaper {rune}: {'free cast (rune charge)' if kind == 'Free' else f'cast with a level {lvl} slot'}"
         out += ["[[case]]", f'id = "rune-{name}"', 'build = "bigby-fighter"', f'title = "{title}"', f'spell = "{name}"',
