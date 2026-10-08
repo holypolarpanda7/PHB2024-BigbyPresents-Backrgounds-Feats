@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.2.1 - 2026-10-07
+
+- **Rune Shaper: choose your spellcasting ability** (Intelligence, Wisdom or Charisma) with the new *Choose Rune Shaper Ability*
+  action. It works for the feat taken at a level-up and for the Rune Carver background, any time after the game loads.
+- **Cloud Strike now follows the book's save:** the *target* rolls the Wisdom save and you turn invisible only if it fails
+  (before, you were invisible no matter what). The invisibility ends at the start of your next turn or when you attack or cast.
+- Fixed: Stone Throw's range (60 ft) and Maelstrom Aura's radius (10 ft) were in the wrong units.
+- Fixed: area rune spells could spend several spell slots in one cast.
+- Added the "How this differs from the book" section to the page: the deliberate buffs are listed openly.
+
 ## v1.2.0 - 2026-10-07
 
 - Renamed to **Bigby Presents: Backgrounds & Feats** (was "PHB2024-BigbyPresents-Backrgounds-Feats"). Same mod ID - existing

@@ -2,7 +2,7 @@
 # Pulled from the live page 2026-10-07 13:34. The full description is description.bbcode (BBCode).
 
 name = "Bigby Presents - Glory of the Giants Feats and Backgrounds"
-version = "1.2.0"
+version = "1.2.1"
 author = "holypolarpanda"
 summary = "Bigby Presents: Glory of the Giants - backgrounds and feats for Baldur's Gate 3. Giant Foundling and Rune Carver backgrounds, Strike of the Giants, Rune Shaper and the six Giant feats. Works standalone; with DnD 5.5e All-in-One BEYOND it replaces its Giant feats (load after it). Script Extender enforces the feat prerequisites."
 
