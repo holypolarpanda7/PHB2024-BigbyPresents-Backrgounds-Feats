@@ -117,10 +117,10 @@
                     <attribute id="Author" type="LSString" value=""/>
                     <attribute id="CharacterCreationLevelName" type="FixedString" value=""/>
                     <attribute id="Description" type="LSString" value="A Baldur&apos;s Gate 3 mod that adds content from Bigby Presents: Glory of the Giants."/>
-                    <attribute id="FileSize" type="uint64" value="2791902"/>
+                    <attribute id="FileSize" type="uint64" value="2793631"/>
                     <attribute id="Folder" type="LSString" value="BigbyPresents-Backgrounds-Feats_8829ee20-0f23-f443-627f-521db0ee8206"/>
                     <attribute id="LobbyLevelName" type="FixedString" value=""/>
-                    <attribute id="MD5" type="LSString" value="97895a7ca0715a15b5acc47778425769"/>
+                    <attribute id="MD5" type="LSString" value="33ed6472d3ad1f9284771685981d9451"/>
                     <attribute id="MenuLevelName" type="FixedString" value=""/>
                     <attribute id="Name" type="LSString" value="BigbyPresents-Backgrounds-Feats"/>
                     <attribute id="NumPlayers" type="uint8" value="4"/>
@@ -128,7 +128,7 @@
                     <attribute id="PublishHandle" type="uint64" value="5621539"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="8829ee20-0f23-f443-627f-521db0ee8206"/>
-                    <attribute id="Version64" type="int64" value="36310274143158272"/>
+                    <attribute id="Version64" type="int64" value="36310274143158274"/>
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version64" type="int64" value="144255927718626661"/>
