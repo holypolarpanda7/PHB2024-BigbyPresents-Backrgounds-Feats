@@ -258,3 +258,22 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "host", status = "PHB2024_RUNE_ABILITY_WIS", turns = -1 }, { target = "host", passive = "PHB2024_Rune_Unlock_BurningHands" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", damage_type = "Fire" }]
 
+
+# ---------------------------------------------------------------- new game through the real character creation
+# [[newgame]]: a fresh launch, New Game, the choices below picked on the creation screen (bg3_new_game_options lists what the
+# loaded mods offer), then the checks on the host. Run: bg3_test_newgame("bigby"). The options depend on the mods loaded.
+[[newgame]]
+id = "newgame-rune-carver"
+title = "Rune Carver background at character creation grants the background passive and the Rune Shaper feature"
+race = "Human"
+class = "Fighter"
+background = "Rune Carver"
+checks = [{ passive = "PHB2024_Background_RuneCarver" }, { passive = "PHB2024_RuneShaper_Feature" }]
+
+[[newgame]]
+id = "newgame-giant-foundling"
+title = "Giant Foundling background at character creation grants the background passive and Strike of the Giants"
+race = "Human"
+class = "Fighter"
+background = "Giant Foundling"
+checks = [{ passive = "PHB2024_Background_GiantFoundling" }, { passive = "PHB2024_StrikeOfGiants_Feature" }]
